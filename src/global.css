@@ -1,0 +1,16 @@
+.body
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-div  
+{
+    /* background-color: gray;
+    border: 5px solid black; */
+    margin: 0;
+    padding: 25px;
+    border-radius: 25px;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
