@@ -1,9 +1,10 @@
 import React, { useReducer, useRef } from 'react';
 
-import './AppBar.css'
+import './Styles/AppBar.css'
 
 //Import Frontend Components
 import Infos from '../UserDate/UserDate'
+import { makeToWorkTheClok } from '../Clock/MakeWorkTheClock';
 
 const AppBar: React.FC = () => {
 
@@ -11,10 +12,10 @@ const AppBar: React.FC = () => {
     const searchInputRef = useRef<HTMLInputElement>(null);  //No type
 
     const hanfleClick = () => {
-        if (searchButtomRef.current)
-        {
+        if (searchButtomRef.current) {
             Infos.TownName = searchInputRef.current?.value ?? '';
             console.log('Class ' + Infos.TownName); //Test Log
+            makeToWorkTheClok();
         }
     };
 

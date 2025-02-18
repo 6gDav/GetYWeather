@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ClockDesign.css"
+import "./Styles/ClockDesign.css"
 
 const Clock: React.FC = () => {
     return (
