@@ -9,7 +9,7 @@ import AskTheClockMaker from "./Logic/The-Actudal-Clcok-Of-The-Town";
 export function makeToWorkTheClok() {
     (async () => {
         const town: string = Infos.TownName;
-        let counntry: NullAndString = await GetContinentByCity(town);
+        let counntry: NullAndString = await GetCountryByCity(town);
 
         if (counntry) {
             const fullNameOfCountry: NullAndString = GetTheValueViaKey(countryCodeAndRealName, counntry);

@@ -1,6 +1,8 @@
 const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> => {
+    //if (!city) return null; // Ha nincs város megadva, ne is próbálkozzon
+
     const apiKey = 'b56615eb035c4135b259729965782e55';
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(city ?? "")}&key=${apiKey}`;
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(city ?? '')}&key=${apiKey}`;
 
     try {
         const response = await fetch(url);
@@ -11,15 +13,16 @@ const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> =
 
         const data = await response.json();
 
-        if (data.results.length === 0) {
+        if (!data.results || data.results.length === 0) {
             return null;
         }
 
-        const continent = data.results[0].components.continent;
+        const continent = data.results[0].components.continent || null;
+        //console.log("Success to get request. (OpenCage) Data:", JSON.stringify(data, null, 2));
+
         return continent || null;
-    }
-    catch (error: any) {
-        console.log('Error occurred: ' + error.message);
+    } catch (error: any) {
+        console.error('Error occurred:', error.message);
         return null;
     }
 };
