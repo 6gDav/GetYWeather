@@ -1,6 +1,6 @@
 export default async function GetCountryByCity(city: string): Promise<NullAndString> {
     const API_KEY = '9dce43d6f9c9dd0aa623390f1f7343c8';
-    const baseUrl = 'http://api.openweathermap.org/geo/1.0/direct';
+    const baseUrl = 'https://api.openweathermap.org/geo/1.0/direct';
 
     try {
         const response = await fetch(`${baseUrl}?q=${city}&limit=1&appid=${API_KEY}`);

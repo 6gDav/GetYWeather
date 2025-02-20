@@ -34,6 +34,8 @@ import './theme/variables.css';
 
 import AppBar from './Components/AppBar_and_UserInputsInBar/AppBar';
 import Clock from './Components/Clock/Clock';
+import Infos from './Components/UserDate/UserDate';
+import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
 
 import "./global.css"
 
@@ -43,6 +45,7 @@ const App: React.FC = () => (
   <IonApp className="body">
     <IonReactRouter>
       <AppBar />
+      <PlcaceHeader />
       <Clock />
     </IonReactRouter>
   </IonApp>

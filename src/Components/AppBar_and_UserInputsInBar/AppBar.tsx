@@ -7,7 +7,7 @@ import Infos from '../UserDate/UserDate'
 import { makeToWorkTheClok } from '../Clock/MakeWorkTheClock';
 
 const AppBar: React.FC = () => {
-
+    
     const searchButtomRef = useRef<HTMLButtonElement>(null);    //No type
     const searchInputRef = useRef<HTMLInputElement>(null);  //No type
 
