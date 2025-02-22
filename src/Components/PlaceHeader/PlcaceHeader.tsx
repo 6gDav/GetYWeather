@@ -17,7 +17,7 @@ function PlcaceHeader() {
 
 
   return (
-    <div className='textFonrSizeOfHader'>{townName}</div>
+    <div className='textFonrSizeOfHader'>{townName || 'Place not found'}</div>
   );
 }
 
