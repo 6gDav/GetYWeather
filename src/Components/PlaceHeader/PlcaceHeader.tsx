@@ -17,11 +17,6 @@ function PlcaceHeader() {
     return () => clearInterval(interval);
   }, [Infos.TownName]);
 
-  if (isPlatform('ios') || isPlatform('android'))
-  {
-    setFontSize(33);  
-  }
-
   return (
     <div style={{fontSize: fontSize}}>{townName || 'Place not found'}</div>
   );
