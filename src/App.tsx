@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact, IonContent } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -37,25 +37,28 @@ import Clock from './Components/Clock/Clock';
 import Infos from './Components/UserDate/UserDate';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
 import FooterSection from './Components/Footer/FooterSection';
+import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
 
 import './global.css'
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp className="body">
-    <IonReactRouter>
-      <div className='main-div'>
-        <AppBar />
-        <div className='main-div2'>
-          <PlcaceHeader />
-          <Clock />
+  <IonApp>
+    <IonContent className='body'>
+      <IonReactRouter>
+        <div>
+          <AppBar />
+          <div className='main-div2'>
+            <PlcaceHeader />
+            <Clock />
+            <WeatherInfos />
+          </div>
         </div>
-      </div>
-      <FooterSection />
-    </IonReactRouter>
+        <FooterSection />
+      </IonReactRouter>
+    </IonContent>
   </IonApp>
 );
-
 
 export default App;
