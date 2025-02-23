@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Infos from '../UserDate/UserDate'; 
-import './Styles/HeaderDesign.css'
 import { isPlatform } from '@ionic/react';
 
 function PlcaceHeader() {
-  const [fontSize, setFontSize] = useState<number>(55);
+  const [fontSize, setFontSize] = useState<number>(70);
   const [townName, setTownName] = useState<string>(Infos.TownName);
 
   useEffect(() => {

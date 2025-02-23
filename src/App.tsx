@@ -36,6 +36,7 @@ import AppBar from './Components/AppBar_and_UserInputsInBar/AppBar';
 import Clock from './Components/Clock/Clock';
 import Infos from './Components/UserDate/UserDate';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
+import FooterSection from './Components/Footer/FooterSection';
 
 import './global.css'
 
@@ -51,6 +52,7 @@ const App: React.FC = () => (
           <Clock />
         </div>
       </div>
+      <FooterSection />
     </IonReactRouter>
   </IonApp>
 );
