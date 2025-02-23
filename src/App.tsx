@@ -37,19 +37,23 @@ import Clock from './Components/Clock/Clock';
 import Infos from './Components/UserDate/UserDate';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
 
-import "./global.css"
+import './global.css'
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp className="body">
     <IonReactRouter>
-      <AppBar />
-      <PlcaceHeader />
-      <Clock />
+      <div className='main-div'>
+        <AppBar />
+        <div className='main-div2'>
+          <PlcaceHeader />
+          <Clock />
+        </div>
+      </div>
     </IonReactRouter>
   </IonApp>
-
 );
+
 
 export default App;

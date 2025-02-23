@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Infos from '../UserDate/UserDate'; // Assuming Infos is an object
+import Infos from '../UserDate/UserDate'; 
 import './Styles/HeaderDesign.css'
+import { isPlatform } from '@ionic/react';
 
 function PlcaceHeader() {
-  const [townName, setTownName] = useState(Infos.TownName);
+  const [fontSize, setFontSize] = useState<number>(55);
+  const [townName, setTownName] = useState<string>(Infos.TownName);
 
   useEffect(() => {
     const updateTownName = () => {
@@ -15,9 +17,13 @@ function PlcaceHeader() {
     return () => clearInterval(interval);
   }, [Infos.TownName]);
 
+  if (isPlatform('ios') || isPlatform('android'))
+  {
+    setFontSize(33);  
+  }
 
   return (
-    <div className='textFonrSizeOfHader'>{townName || 'Place not found'}</div>
+    <div style={{fontSize: fontSize}}>{townName || 'Place not found'}</div>
   );
 }
 
