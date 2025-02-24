@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer, useRef, useState } from 'react';
 
 import './Styles/AppBar.css';
 
@@ -7,6 +7,8 @@ import Infos from '../UserDate/UserDate'
 import { makeToWorkTheClok } from '../Clock/MakeWorkTheClock';
 
 const AppBar: React.FC = () => {
+
+    //Search input manager
 
     const searchButtomRef = useRef<HTMLButtonElement>(null);    //No type
     const searchInputRef = useRef<HTMLInputElement>(null);  //No type
@@ -18,6 +20,21 @@ const AppBar: React.FC = () => {
             makeToWorkTheClok();
         }
     };
+
+    //Theme switcher
+
+    const [darkMode, setDarkMode] = useState<boolean>(false);
+    const [themeText, setthemeText] = useState<string>('Light');
+
+    const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setDarkMode(prevDarkMode => {
+            document.documentElement.style.setProperty("--ion-background-color", prevDarkMode ? "#ffffff" : "#000000");
+            document.documentElement.style.setProperty("--ion-text-color", prevDarkMode ? "#000000" : "#ffffff");
+            setthemeText(prevDarkMode ? 'Dark' : 'Light');
+            return !prevDarkMode;
+        });
+    };
+    
 
     return (
         <header className="p-3 text-bg-dark">
@@ -42,7 +59,10 @@ const AppBar: React.FC = () => {
 
                     <div className="text-end d-flex gap-2">
                         <button type="button" className="btn btn-outline-light me-2">Login</button>
-                        <button type="button" className="btn btn-warning">Sign-up</button>
+                        <button type="button" className="btn btn-warning  me-2">Sign-up</button>
+                        <label htmlFor="themeMode" className='textFontSizeOfHader'>
+                        <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
+                        </label>
                     </div>
                 </div>
             </div>

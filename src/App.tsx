@@ -45,7 +45,7 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonContent className='body'>
+    <IonContent className="body" scrollY={true}>
       <IonReactRouter>
         <div>
           <AppBar />
