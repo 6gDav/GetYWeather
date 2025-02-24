@@ -1,0 +1,2 @@
+can't scrool on android emultor 
+there is a gap in the buttom of the footer its sohws on a big 27" screen
