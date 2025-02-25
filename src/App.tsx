@@ -52,10 +52,16 @@ const App: React.FC = () => (
           <div className='main-div2'>
             <PlcaceHeader />
             <Clock />
+            <Clock />
+            <Clock />
+            <Clock />
+            <Clock />
+            <Clock />
+            <Clock />
             <WeatherInfos />
           </div>
+          <FooterSection />
         </div>
-        <FooterSection />
       </IonReactRouter>
     </IonContent>
   </IonApp>

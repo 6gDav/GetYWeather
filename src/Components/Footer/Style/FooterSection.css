@@ -5,7 +5,8 @@ ul {
 
 .footer-section {
     background: #151414;
-    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-cta {
