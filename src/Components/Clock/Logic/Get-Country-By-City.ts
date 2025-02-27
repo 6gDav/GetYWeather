@@ -5,7 +5,7 @@ export default async function GetCountryByCity(city: string): Promise<NullAndStr
     try {
         const response = await fetch(`${baseUrl}?q=${city}&limit=1&appid=${API_KEY}`);
         if (!response.ok) {
-            throw new Error(`Hiba történt: ${response.statusText}`);
+            throw new Error(`Error occurnd: ${response.statusText}`);
         }
 
         const data = await response.json();
@@ -14,12 +14,12 @@ export default async function GetCountryByCity(city: string): Promise<NullAndStr
             return data[0].country; // Az ország neve lesz visszaadva
         }
         else {
-            console.error('Nem található település.');
+            console.error('City is not found');
             return null;
         }
     }
     catch (error) {
-        console.error('Hiba történt:', error);
+        console.error('Error occurred:', error);
         return null;
     }
 }

@@ -16,7 +16,7 @@ const AppBar: React.FC = () => {
     const hanfleClick = () => {
         if (searchButtomRef.current) {
             Infos.TownName = searchInputRef.current?.value ?? '';
-            console.log('Class ' + Infos.TownName); //Test Log
+            //console.log('Class ' + Infos.TownName); //Test Log
             makeToWorkTheClok();
         }
     };

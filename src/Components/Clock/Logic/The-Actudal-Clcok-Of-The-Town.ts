@@ -21,7 +21,7 @@ const AskTheClockMaker = (contient: string, town: string) => {
     let time = makeTheActualClcok(contient, town);
     const clockHeadingEL: HTMLHeadElement = document.getElementById('clock')! as HTMLHeadElement;
     clockHeadingEL.innerText = time;
-    console.log(time);
+    //console.log(time);
   }, 1_000);
   intervall;
 };
