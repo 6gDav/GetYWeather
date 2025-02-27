@@ -22,10 +22,13 @@ export function makeToWorkTheClok() {
             }
             else {
                 console.error('Some components are null');
+
             }
         }
         else {
             console.error('Failded to request the current clock of the town.');
+            const clockHeadingEL: HTMLHeadElement = document.getElementById('clock')! as HTMLHeadElement;
+            clockHeadingEL.innerText = "Faild to get the time.";
         }
 
     })();
