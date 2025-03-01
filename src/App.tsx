@@ -52,7 +52,7 @@ const App: React.FC = () => (
           <div className='main-div2'>
             <PlcaceHeader />
             <Clock />
-            <br />
+            <hr />
             <WeatherInfos />
           </div>
           <FooterSection />
