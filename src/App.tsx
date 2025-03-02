@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact, IonContent } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact, IonContent, isPlatform } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -33,6 +33,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 
 import AppBar from './Components/AppBar_and_UserInputsInBar/AppBar';
+import AppBarMobil from './Components/AppBar_and_UserInputsInBar/AppBarMobil';
 import Clock from './Components/Clock/Clock';
 import Infos from './Components/UserDate/UserDate';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
@@ -43,23 +44,30 @@ import './global.css'
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonContent className="body" scrollY={true}>
-      <IonReactRouter>
-        <div>
-          <AppBar />
-          <div className='main-div2'>
-            <PlcaceHeader />
-            <Clock />
-            <hr />
-            <WeatherInfos />
+const App: React.FC = () => {
+  const isIOS = isPlatform('ios');
+  const isAndroid = isPlatform('android');
+
+
+  return (
+    <IonApp>
+      <IonContent className="body" scrollY={true}>
+        <IonReactRouter>
+          <div>
+            {!isIOS && !isAndroid && <AppBar />}
+            {isIOS && isAndroid && <AppBarMobil />}
+            <div className='main-div2'>
+              <PlcaceHeader />
+              <Clock />
+              <hr />
+              <WeatherInfos />
+            </div>
+            <FooterSection />
           </div>
-          <FooterSection />
-        </div>
-      </IonReactRouter>
-    </IonContent>
-  </IonApp>
-);
+        </IonReactRouter>
+      </IonContent>
+    </IonApp>
+  );
+}
 
 export default App;

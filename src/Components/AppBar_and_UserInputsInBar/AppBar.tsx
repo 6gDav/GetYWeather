@@ -35,7 +35,7 @@ const AppBar: React.FC = () => {
             return !prevDarkMode;
         });
     };
-    
+
     //Set Clock to Zero If new town is enterd
 
     useEffect(() => {
@@ -67,7 +67,7 @@ const AppBar: React.FC = () => {
                         <button type="button" className="btn btn-outline-light me-2">Login</button>
                         <button type="button" className="btn btn-warning  me-2">Sign-up</button>
                         <label htmlFor="themeMode" className='textFontSizeOfHader'>
-                        <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
+                            <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
                         </label>
                     </div>
                 </div>

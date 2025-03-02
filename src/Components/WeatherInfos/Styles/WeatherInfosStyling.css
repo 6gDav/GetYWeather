@@ -11,9 +11,10 @@
     font-weight: bold;
     margin-top: 10px;
     border: 3px solid black;
-    padding: 1%;
+    padding: 2%;
+    border-radius: 15%;
 }
 
 .tempaterureHeader {
-    color: grey;
+    color: black;
 }
