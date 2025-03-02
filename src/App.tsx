@@ -32,10 +32,11 @@ import '@ionic/react/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import Infos from './Components/UserDate/UserDate';
+
 import AppBar from './Components/AppBar_and_UserInputsInBar/AppBar';
 import AppBarMobil from './Components/AppBar_and_UserInputsInBar/AppBarMobil';
 import Clock from './Components/Clock/Clock';
-import Infos from './Components/UserDate/UserDate';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
 import FooterSection from './Components/Footer/FooterSection';
 import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
