@@ -32,13 +32,13 @@ const WeatherInfos = () => {
             setTemperature(data);
             if (data)
               {
-                if (+data < -10) setTempColors('linear-gradient(90deg, rgb(51, 204, 255))')
-                else if (+data > -10 && +data < 0) setTempColors('linear-gradient(90deg, blue)')
-                else if (+data > 0 && +data < 10) setTempColors('linear-gradient(90deg, rgb(51, 102, 255))')
-                else if (+data > 10 && +data < 20) setTempColors('linear-gradient(90deg, rgb(255, 255, 0))')
-                else if (+data > 20 && +data < 30) setTempColors('linear-gradient(90deg, rgb(255, 153, 102))')
-                else if (+data > 30 && +data < 40) setTempColors('linear-gradient(90deg, rgb(153, 0, 204))')
-                else if (+data > 40) setTempColors('linear-gradient(90deg, rgb(204, 0, 0))')
+                if (+data < -10) setTempColors('rgb(51, 204, 255)')
+                else if (+data > -10 && +data < 0) setTempColors('blue')
+                else if (+data > 0 && +data < 10) setTempColors('rgb(51, 102, 255)')
+                else if (+data > 10 && +data < 20) setTempColors('rgb(255, 255, 0)')
+                else if (+data > 20 && +data < 30) setTempColors('rgb(255, 153, 102)')
+                else if (+data > 30 && +data < 40) setTempColors('rgb(153, 0, 204)')
+                else if (+data > 40) setTempColors('rgb(204, 0, 0)')
                 console.log('Enter in the dinamic color if');
               }
               console.log(tempColors);
@@ -63,7 +63,7 @@ const WeatherInfos = () => {
   return (
     <div className='mainDiv'>
       <div className='tempatureDiv' style={{ background: tempColors }}>
-        <h1>Temp: {temperature}</h1>
+        <h1 className='tempaterureHeader'>Temp: {temperature}</h1>
       </div>
       <h2>Description: {description}</h2>
       <h2>Humidity: {humidity}</h2>

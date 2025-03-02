@@ -1,10 +1,11 @@
-import React, { useReducer, useRef, useState } from 'react';
+import React, { useEffect, useReducer, useRef, useState } from 'react';
 
 import './Styles/AppBar.css';
 
 //Import Frontend Components
 import Infos from '../UserDate/UserDate'
 import { makeToWorkTheClok } from '../Clock/MakeWorkTheClock';
+import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
 const AppBar: React.FC = () => {
 
@@ -35,6 +36,11 @@ const AppBar: React.FC = () => {
         });
     };
     
+    //Set Clock to Zero If new town is enterd
+
+    useEffect(() => {
+        SetClokcToNull();
+    }, [searchInputRef])
 
     return (
         <header className="p-3 text-bg-dark">

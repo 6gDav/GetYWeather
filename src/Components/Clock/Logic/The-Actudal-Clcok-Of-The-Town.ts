@@ -16,14 +16,22 @@ function makeTheActualClcok(continent: string, capital: string) {
   }
 }
 
-const AskTheClockMaker = (contient: string, town: string) => {
-  let intervall = setInterval(() => {
-    let time = makeTheActualClcok(contient, town);
-    const clockHeadingEL: HTMLHeadElement = document.getElementById('clock')! as HTMLHeadElement;
+let intervall: NodeJS.Timeout | undefined;
+
+const AskTheClockMaker = (continent: string, town: string) => {
+  SetClokcToNull();
+  intervall = setInterval(() => {
+    let time = makeTheActualClcok(continent, town);
+    const clockHeadingEL = document.getElementById('clock')! as HTMLHeadElement;
     clockHeadingEL.innerText = time;
-    //console.log(time);
   }, 1_000);
-  intervall;
+};
+
+export const SetClokcToNull = () => {
+  if (intervall) {
+    clearInterval(intervall);
+    intervall = undefined;
+  }
 };
 
 export default AskTheClockMaker;
