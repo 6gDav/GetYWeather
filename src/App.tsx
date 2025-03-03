@@ -55,8 +55,9 @@ const App: React.FC = () => {
       <IonContent className="body" scrollY={true}>
         <IonReactRouter>
           <div>
-            {!isIOS && !isAndroid && <AppBar />}
-            {isIOS && isAndroid && <AppBarMobil />}
+            {!isIOS && !isAndroid && < AppBar/>}
+            {isIOS || isAndroid && <AppBarMobil />}
+            {/* <AppBar /> */}
             <div className='main-div2'>
               <PlcaceHeader />
               <Clock />

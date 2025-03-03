@@ -1,73 +1,58 @@
-import React from "react";
+import React, { useState } from 'react';
+import {
+  MDBContainer,
+  MDBCollapse,
+  MDBNavbar,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBBtn,
+} from 'mdb-react-ui-kit';
 
-function AppBarMobil() {
-    return (
-        <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{ width: "280px" }}>
-            <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <svg className="bi pe-none me-2" width="40" height="32">
-                    <use xlinkHref="#bootstrap"></use>
-                </svg>
-                <span className="fs-4">Sidebar</span>
-            </a>
+import "./Styles/AppBarMobil.css"
 
-            <ul className="nav nav-pills flex-column mb-auto">
-                <li className="nav-item">
-                    <a href="#" className="nav-link active" aria-current="page">
-                        <svg className="bi pe-none me-2" width="16" height="16">
-                            <use xlinkHref="#home"></use>
-                        </svg>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
-                        <svg className="bi pe-none me-2" width="16" height="16">
-                            <use xlinkHref="#speedometer2"></use>
-                        </svg>
-                        Dashboard
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
-                        <svg className="bi pe-none me-2" width="16" height="16">
-                            <use xlinkHref="#table"></use>
-                        </svg>
-                        Orders
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
-                        <svg className="bi pe-none me-2" width="16" height="16">
-                            <use xlinkHref="#grid"></use>
-                        </svg>
-                        Products
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
-                        <svg className="bi pe-none me-2" width="16" height="16">
-                            <use xlinkHref="#people-circle"></use>
-                        </svg>
-                        Customers
-                    </a>
-                </li>
-            </ul>
-            <hr />
-            <div className="dropdown">
-                <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
-                    <strong>mdo</strong>
-                </a>
-                <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-                    <li><a className="dropdown-item" href="#">New project...</a></li>
-                    <li><a className="dropdown-item" href="#">Settings</a></li>
-                    <li><a className="dropdown-item" href="#">Profile</a></li>
-                    <li><hr className="dropdown-divider" /></li>
-                    <li><a className="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
-        </div>
-    );
+export default function App() {
+  const [showAnimated, setShowAnimated] = useState(false);
+  const [showAnimated2, setShowAnimated2] = useState(false);
+  const [showAnimated3, setShowAnimated3] = useState(false);
+
+  return (
+    <>
+      <section className='mb-3'>
+        <MDBNavbar dark bgColor='dark'>
+          <MDBContainer fluid>
+            <MDBNavbarToggler
+              type='button'
+              className='second-button'
+              data-target='#navbarToggleExternalContent'
+              aria-controls='navbarToggleExternalContent'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
+              onClick={() => setShowAnimated2(!showAnimated2)}
+            >
+              <div className={`animated-icon2 ${showAnimated2 && 'open'}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </MDBNavbarToggler>
+          </MDBContainer>
+        </MDBNavbar>
+
+        <MDBCollapse open={showAnimated2}>
+          <div className='bg-light shadow-3 p-4'>
+            <MDBBtn block className='border-bottom m-0' color='link'>
+              Link 1
+            </MDBBtn>
+            <MDBBtn block className='border-bottom m-0' color='link'>
+              Link 2
+            </MDBBtn>
+            <MDBBtn block className='border-bottom m-0' color='link'>
+              Link 2
+            </MDBBtn>
+          </div>
+        </MDBCollapse>
+      </section>
+    </>
+  );
 }
-
-export default AppBarMobil;
