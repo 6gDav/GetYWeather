@@ -11,9 +11,7 @@ import {
 import "./Styles/AppBarMobil.css"
 
 export default function App() {
-  const [showAnimated, setShowAnimated] = useState(false);
   const [showAnimated2, setShowAnimated2] = useState(false);
-  const [showAnimated3, setShowAnimated3] = useState(false);
 
   return (
     <>
