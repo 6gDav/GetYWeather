@@ -15,6 +15,8 @@ import Infos from '../UserDate/UserDate';
 import { makeToWorkTheClok } from '../Clock/MakeWorkTheClock';
 import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
+import { useTheme, useAppBar } from './Logic/AppBarCodeBehindMenagger';
+
 export default function App() {
   const [showAnimated2, setShowAnimated2] = useState(false);
 
@@ -23,27 +25,11 @@ export default function App() {
   const searchButtomRef = useRef<HTMLButtonElement>(null);    //No type
   const searchInputRef = useRef<HTMLInputElement>(null);  //No type
 
-  const hanfleClick = () => {
-    if (searchButtomRef.current) {
-      Infos.TownName = searchInputRef.current?.value ?? '';
-      //console.log('Class ' + Infos.TownName); //Test Log
-      makeToWorkTheClok();
-    }
-  };
+  const { handleClick } = useAppBar(searchButtomRef, searchInputRef);
 
   //Theme switcher
 
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-  const [themeText, setthemeText] = useState<string>('Light');
-
-  const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDarkMode(prevDarkMode => {
-      document.documentElement.style.setProperty("--ion-background-color", prevDarkMode ? "#ffffff" : "#000000");
-      document.documentElement.style.setProperty("--ion-text-color", prevDarkMode ? "#000000" : "#ffffff");
-      setthemeText(prevDarkMode ? 'Dark' : 'Light');
-      return !prevDarkMode;
-    });
-  };
+  const { themeText, handleThemeChange } = useTheme();
 
   //Set Clock to Zero If new town is enterd
 
@@ -91,7 +77,7 @@ export default function App() {
               <p className='textFontSizeOfHader'>Contact</p>
             </MDBBtn>
             <input ref={searchInputRef} type="search" className="form-control form-control-dark text-bg-white" placeholder="Search" aria-label="Search" />
-            <button ref={searchButtomRef} onClick={hanfleClick} type="button" className="btn btn-outline-light">Search</button>
+            <button ref={searchButtomRef} onClick={handleClick} type="button" className="btn btn-outline-light">Search</button>
             <button type="button" className="btn btn-outline-light me-2">Login</button>
             <button type="button" className="btn btn-warning  me-2">Sign-up</button>
             <label htmlFor="themeMode" className='textFontSizeOfHader' style={{ color: 'white' }}>
