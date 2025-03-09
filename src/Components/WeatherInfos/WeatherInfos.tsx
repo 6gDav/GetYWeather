@@ -10,6 +10,10 @@ const WeatherInfos = () => {
   const [temperature, setTemperature] = useState<NullAndString>('Place not found');
   const [description, setDescription] = useState<NullAndString>();
   const [humidity, setHumidity] = useState<NullAndString>();
+  const [feelsLike, setfeelsLike] = useState<NullAndString>();
+  const [clouds, setclouds] = useState<NullAndString>();
+  const [windSpeed, setwindSpeed] = useState<NullAndString>();
+  const [pressure, setpressure] = useState<NullAndString>();
 
   //Dibamic Wather Styles
 
@@ -52,6 +56,38 @@ const WeatherInfos = () => {
             setHumidity(data);
           })
           .catch(console.error);
+
+        //Feels Like 
+        ManageAPI(Infos.TownName, 'feels_like')
+          .then((data) => {
+            //console.log("API response:", data);
+            setfeelsLike(data);
+          })
+          .catch(console.error);
+
+        //Clouds
+        ManageAPI(Infos.TownName, 'clouds')
+          .then((data) => {
+            //console.log("API response:", data);
+            setclouds(data);
+          })
+          .catch(console.error);
+
+        //Wind Speed
+        ManageAPI(Infos.TownName, 'wind speed')
+          .then((data) => {
+            //console.log("API response:", data);
+            setwindSpeed(data);
+          })
+          .catch(console.error);
+
+        //Pressure
+        ManageAPI(Infos.TownName, 'pressure')
+          .then((data) => {
+            //console.log("API response:", data);
+            setpressure(data);
+          })
+          .catch(console.error);
       }
     }
 
@@ -65,8 +101,12 @@ const WeatherInfos = () => {
       <div className='tempatureDiv' style={{ background: tempColors }}>
         <h1 className='tempaterureHeader'>Temp: {temperature} °C</h1>
       </div>
+      <h2>Feels Like: {feelsLike}</h2>
       <h2>Description: {description}</h2>
       <h2>Humidity: {humidity}</h2>
+      <h2>Clouds percentage: {clouds}%</h2>
+      <h2>Wind Speed: {windSpeed} km/h</h2>
+      <h2>Pressure: {pressure} hPa</h2>
     </div>
   )
 }
