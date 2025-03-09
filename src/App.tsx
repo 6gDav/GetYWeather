@@ -42,22 +42,34 @@ import FooterSection from './Components/Footer/FooterSection';
 import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
 
 import './global.css'
+import { useEffect, useState } from 'react';
 
 setupIonicReact();
 
 const App: React.FC = () => {
+  //platfrom varibles
   const isIOS = isPlatform('ios');
   const isAndroid = isPlatform('android');
 
+  const [isMobil, setIsMobil] = useState<boolean>(window.innerWidth < 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobil(window.innerWidth < 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <IonApp>
       <IonContent className="body" scrollY={true}>
         <IonReactRouter>
           <div>
-            {!isIOS && !isAndroid && <AppBar />}
-            {isIOS || isAndroid && <AppBarMobil />}
-            <div className='main-div2'>
+            {!isMobil && <AppBar />}
+            {isMobil && <AppBarMobil />}
+            <div className="main-div2">
               <PlcaceHeader />
               <Clock />
               <hr />
