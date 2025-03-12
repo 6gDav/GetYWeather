@@ -40,6 +40,7 @@ import Clock from './Components/Clock/Clock';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
 import FooterSection from './Components/Footer/FooterSection';
 import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
+import MapComponent from './Components/GeoLacationMap/GeloLocationMap';
 
 import './global.css'
 import { useEffect, useState } from 'react';
@@ -47,10 +48,8 @@ import { useEffect, useState } from 'react';
 setupIonicReact();
 
 const App: React.FC = () => {
-  //platfrom varibles
-  const isIOS = isPlatform('ios');
-  const isAndroid = isPlatform('android');
 
+  //Chack mobil size
   const [isMobil, setIsMobil] = useState<boolean>(window.innerWidth < 600);
 
   useEffect(() => {
@@ -74,6 +73,8 @@ const App: React.FC = () => {
               <Clock />
               <hr />
               <WeatherInfos />
+              <hr />
+              <MapComponent />
             </div>
             <FooterSection />
           </div>
