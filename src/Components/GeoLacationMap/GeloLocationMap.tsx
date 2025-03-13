@@ -86,7 +86,7 @@ const MapComponent: React.FC = () => {
 
   return (
     <div>
-      <div ref={mapRef} style={{ width: "100%", height: "400px", borderRadius: "5%" }} />
+      <div ref={mapRef} style={{ width: "100%", height: "1000px", borderRadius: "5%" }} />
     </div>
   );
 };

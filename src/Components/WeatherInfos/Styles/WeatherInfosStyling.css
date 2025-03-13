@@ -1,6 +1,6 @@
 .mainDiv {
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     padding: 2%;
     border-radius: 10px;
     border: 5px solid #ffc107;
@@ -12,9 +12,67 @@
     margin-top: 10px;
     border: 3px solid black;
     padding: 2%;
-    border-radius: 15%;
+    border-radius: 500%;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secodanryTemps {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secodanryTemps>h2 {
+    font-size: 20px;
 }
 
 .tempaterureHeader {
     color: black;
+}
+
+.hrColor {
+    height: 5px;
+    background-color: black;
+    border: none;
+}
+
+.lineDiv {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feelsLike {
+    display: flex;
+    justify-content: center; 
+    height: auto; 
+}
+
+.otherInfosDiv {
+
+    display: inline-block;
+}
+
+.discpitionDiv {
+    border: 5px solid black;
+    border-radius: 25%;
+    background-color: azure;
+    color: black;
+    height: 150%;
+}
+
+.humidityDiv {
+    border: 5px solid black;
+    border-radius: 25%;
+    background-color: azure;
+    color: black;
+    height: 150%;
 }
