@@ -30,7 +30,7 @@
     margin-right: auto;
 }
 
-.secodanryTemps>h2 {
+.secodanryTemps > h2 {
     font-size: 20px;
 }
 
@@ -52,27 +52,68 @@
 
 .feelsLike {
     display: flex;
-    justify-content: center; 
-    height: auto; 
+    justify-content: center;
+    height: auto;
 }
 
 .otherInfosDiv {
-
-    display: inline-block;
+    display: flex;
+    gap: 20px;
 }
 
-.discpitionDiv {
-    border: 5px solid black;
-    border-radius: 25%;
-    background-color: azure;
-    color: black;
+.tileStyleContainer {
+    background-color: #f0ffff;
+    padding: 16px;
+    border-radius: 12px;
+    border: 3px solid #ffc107;
+    box-shadow: 0 4px 6px #80808040;
+    color: #333;
+    width: 50%;
+}
+
+.tileStyleContainer2 {
+    background-color: #f0ffff;
+    padding: 16px;
+    border-radius: 12px;
+    border: 3px solid #ffc107;
+    box-shadow: 0 4px 6px #80808040;
+    color: #333;
+    width: 100%;
     height: 150%;
 }
 
-.humidityDiv {
-    border: 5px solid black;
-    border-radius: 25%;
-    background-color: azure;
-    color: black;
-    height: 150%;
+.tileStyleContainer>h2,
+.tileStyleContainer2>h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .otherInfosDiv {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tileStyleContainer {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .secodanryTemps {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lineDiv {
+        width: 100%; 
+        margin: 10px 0; 
+    }    
 }

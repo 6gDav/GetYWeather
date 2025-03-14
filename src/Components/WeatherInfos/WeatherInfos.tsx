@@ -114,6 +114,18 @@ const WeatherInfos = () => {
     return () => clearInterval(interval)
   }, [Infos.TownName]);
 
+  //Chack mobil size
+  const [isMobil, setIsMobil] = useState<boolean>(window.innerWidth < 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobil(window.innerWidth < 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className='mainDiv'>
       <main>
@@ -121,25 +133,50 @@ const WeatherInfos = () => {
           <h1 className='tempaterureHeader'> {temperature} °C</h1>
         </div>
         <div className='secodanryTemps'>
-          <h2>Max Temp: <p style={{fontSize: "45px", color: "red"}}>{maxTempature} °C</p></h2>
-          <div className='lineDiv'/>
-          <h2>Min Temp: <p style={{fontSize: "45px", color: "blue"}}>{minTempatre} °C</p></h2>
+          <h2>Max Temp: <p style={{ fontSize: "45px", color: "red" }}>{maxTempature} °C</p></h2>
+          {!isMobil && <div className='lineDiv' />}
+          {isMobil && <div className='lineDiv' />}
+          
+          <h2>Min Temp: <p style={{ fontSize: "45px", color: "blue" }}>{minTempatre} °C</p></h2>
         </div>
         <div>
-          <h2 className='feelsLike'>Feels Like: {feelsLike}</h2>
+          <h2 className='feelsLike'>Feels Like: {feelsLike} °C</h2>
         </div>
-        <hr className='hrColor'/>
+
+        <hr className='hrColor' />
+
+        {/* first row  */}
         <div className='otherInfosDiv'>
-          <div className='discpitionDiv'>
-            <h2>Description: {description}</h2>
+          <div className='tileStyleContainer'>
+            <h2>Description: <br /> <p style={{ fontSize: "50px" }}>{description}</p></h2>
           </div>
-          <div className='humidityDiv'>
-            <h2>Humidity: {humidity}</h2>
+          <br />
+          <div className='tileStyleContainer'>
+            <h2>Humidity: <br /> <p style={{ fontSize: "50px" }}>{humidity}</p></h2>
           </div>
         </div>
-        <h2>Clouds percentage: {clouds}%</h2>
-        <h2>Wind Speed: {windSpeed} km/h</h2>
-        <h2>Pressure: {pressure} hPa</h2>
+
+        <br />
+
+        {/* second row */}
+        <div className='otherInfosDiv'>
+          <div className='tileStyleContainer'>
+            <h2>Clouds percentage: <br /> <p style={{ fontSize: "50px" }}>{clouds} %</p></h2>
+          </div>
+          <br />
+          <div className='tileStyleContainer'>
+            <h2>Wind Speed: <br /> <p style={{ fontSize: "50px" }}>{windSpeed} km/h</p></h2>
+          </div>
+        </div>
+
+        <br />
+
+        {/* last row */}
+        <div className='otherInfosDiv'>
+          <div className='tileStyleContainer2'>
+            <h2>Pressure: <br /> <p style={{ fontSize: "50px" }}>{pressure} hPa</p> </h2>
+          </div>
+        </div>
       </main>
     </div>
   )

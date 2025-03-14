@@ -39,7 +39,7 @@ const MapComponent: React.FC = () => {
         }),
       ],
       view: new View({
-        center: fromLonLat([ 1.50735, 52.12776]), 
+        center: fromLonLat([ 0, 51]), 
         zoom: 6,
       }),
     });
@@ -86,7 +86,7 @@ const MapComponent: React.FC = () => {
 
   return (
     <div>
-      <div ref={mapRef} style={{ width: "100%", height: "1000px", borderRadius: "5%" }} />
+      <div ref={mapRef} style={{ width: "100%", height: "800px", borderRadius: "5%" }} />
     </div>
   );
 };

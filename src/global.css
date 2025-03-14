@@ -19,9 +19,10 @@
     padding: 25px;
     border-radius: 25px;
     margin-top: 2%;
-    margin-left: 23%;
+    margin-left: 19%;
     width: 65%;
     box-sizing: border-box;
+    height: 100%;
 }
 
 @media (max-width: 1400px) {
