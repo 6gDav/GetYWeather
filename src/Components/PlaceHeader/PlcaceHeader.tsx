@@ -3,8 +3,19 @@ import Infos from '../UserDate/UserDate';
 import { isPlatform } from '@ionic/react';
 
 function PlcaceHeader() {
-  const [fontSize, setFontSize] = useState<number>(70);
+  const [fontSize, setFontSize] = useState<number>(100);
   const [townName, setTownName] = useState<string>(Infos.TownName);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setFontSize(45);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const updateTownName = () => {

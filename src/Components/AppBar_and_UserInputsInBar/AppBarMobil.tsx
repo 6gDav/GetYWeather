@@ -77,6 +77,7 @@ export default function App() {
               <p className='textFontSizeOfHader'>Contact</p>
             </MDBBtn>
             <input ref={searchInputRef} type="search" className="form-control form-control-dark text-bg-white" placeholder="Search" aria-label="Search" />
+            <br />
             <button ref={searchButtomRef} onClick={handleClick} type="button" className="btn btn-outline-light">Search</button>
             <button type="button" className="btn btn-outline-light me-2">Login</button>
             <button type="button" className="btn btn-warning  me-2">Sign-up</button>

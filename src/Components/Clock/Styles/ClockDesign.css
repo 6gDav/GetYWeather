@@ -1,21 +1,20 @@
-#place-header
-{
-    font-size: 60px;
-}
-
-#clock-div
-{
-    background-color:  #ffffff;
+#clock-div {
+    background-color: #ffffff;
     border: 5px solid #ffc107;
-    padding: 25px;
+    padding: 50px;
     border-radius: 25px;
     margin-top: 5%;
     display: inline-block;
 }
 
-#clock-div > h2
-{
+#clock-div > h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     color: black;
+}
+
+@media (max-width: 600px) {
+    #clock-div {
+        padding: 15px;
+    }
 }
