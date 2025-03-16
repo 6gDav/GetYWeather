@@ -10,15 +10,25 @@ interface WeatherData {
 function WeatherCards() {
   const [data, setData] = useState<WeatherData[]>([]);
 
-  // useEffect(() => {
-  //   if (Infos.Data) {
-  //     const parsedData = JSON.parse(Infos.Data);  // JSON.parse() a string JSON-ra
-  //     const forecastData = parsedData.list.filter((item: WeatherData) =>
-  //       item.dt_txt.includes("12:00:00")  // pl. 12:00-kori adatokat jelenítjük meg
-  //     );
-  //     setData(forecastData);
-  //   }
-  // }, [Infos.Data]);
+  useEffect(() => {
+    if (Infos.Data) {
+      let parsedData: any = ''
+      try {
+
+        parsedData = JSON.parse(Infos.Data);  //! Itt a hiba
+      } 
+      catch (error) {
+        console.error('Itt a hiba!!!' + error);
+        return;
+      }
+      
+      const forecastData = parsedData.list.map((item: WeatherData) => {
+        item.dt_txt.includes("12:00:00")  // pl. 12:00-kori adatokat jelenítjük meg
+      });
+
+      setData(forecastData);
+    }
+  }, [Infos.Data]);
 
   return (
     <div>
