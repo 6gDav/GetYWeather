@@ -4,6 +4,8 @@ import ManageAPI from './Logic/ManaggeAPI';
 
 import './Styles/WeatherInfosStyling.css';
 
+import WeatherCards from './WeatherCards';
+
 const WeatherInfos = () => {
   //WaatherDatas
 
@@ -136,7 +138,7 @@ const WeatherInfos = () => {
           <h2>Max Temp: <p style={{ fontSize: "45px", color: "red" }}>{maxTempature} °C</p></h2>
           {!isMobil && <div className='lineDiv' />}
           {isMobil && <div className='lineDiv' />}
-          
+
           <h2>Min Temp: <p style={{ fontSize: "45px", color: "blue" }}>{minTempatre} °C</p></h2>
         </div>
         <div>
@@ -175,6 +177,19 @@ const WeatherInfos = () => {
         <div className='otherInfosDiv'>
           <div className='tileStyleContainer2'>
             <h2>Pressure: <br /> <p style={{ fontSize: "50px" }}>{pressure} hPa</p> </h2>
+          </div>
+        </div>
+
+        <hr className='hrColor' />
+
+        <div className='forcast'>
+          <h2 className='forcastHeading'>Forcast</h2>
+          <br />
+
+          {/* cards */}
+          <div className='forcastDiv'>
+            <br />
+            <WeatherCards />
           </div>
         </div>
       </main>

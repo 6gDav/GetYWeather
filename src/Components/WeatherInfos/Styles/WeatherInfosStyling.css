@@ -88,6 +88,22 @@
     font-size: 25px;
 }
 
+.forcastHeading {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+}
+
+.forcastDiv {
+    height: auto 300px;
+    text-align: center;
+    justify-content: center;
+    border: 3px solid #ffc107;
+    color: #333;
+    background-color: #f0ffff;
+    border-radius: 25px;
+}
+
 h2 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 18px;
@@ -119,5 +135,9 @@ h2 {
 
     .mainDiv {
         width: 130%;
+    }
+
+    .forcastHeading {
+        font-size: 50px;
     }
 }

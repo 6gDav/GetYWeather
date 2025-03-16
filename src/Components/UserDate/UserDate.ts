@@ -22,4 +22,16 @@ export default class Infos {
         this.continent = value;
     }
     //#endregion
+
+    //#region json API Data
+    private static data: string = '';
+
+    static get Data(): string {
+        return this.data;
+    }
+
+    static set Data(value: string) {
+        this.data = value;
+    }
+    //#endregion
 }

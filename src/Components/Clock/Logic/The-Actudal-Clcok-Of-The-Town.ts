@@ -2,7 +2,6 @@ function makeTheActualClcok(continent: string, capital: string) {
   const timeZone = `${continent}/${capital.replace(/\s+/g, "_")}`;
 
   try {
-    // Format date and time based on the time zone
     const formatter = new Intl.DateTimeFormat("en-US", {
       timeZone,
       timeStyle: "medium",
