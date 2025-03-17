@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Infos from '../UserDate/UserDate';
-import { isPlatform } from '@ionic/react';
 
 function PlcaceHeader() {
   const [fontSize, setFontSize] = useState<number>(100);
@@ -9,7 +8,7 @@ function PlcaceHeader() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
-        setFontSize(45);
+        setFontSize(35);
       }
     };
 
