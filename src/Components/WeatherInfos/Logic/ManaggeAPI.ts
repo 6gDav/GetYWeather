@@ -10,7 +10,8 @@ export default async function ManageAPI(city: string, weatherType: weatherTypes)
         const responseForCards = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=hu&appid=${apiKey}`);
 
         const data = await response.json();
-        Infos.Data = await responseForCards.json();
+        const data2 = await responseForCards.json();
+        Infos.Data = JSON.stringify(data2);
 
         if (data.cod === 200) {
             switch (weatherType) {
