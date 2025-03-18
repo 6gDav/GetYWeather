@@ -1,0 +1,18 @@
+.calendarContainer {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 5px solid #ffc107;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+}
+
+.calendarContainer > h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+}
