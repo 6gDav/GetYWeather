@@ -1,4 +1,4 @@
-.calendarContainer {
+ .calendarContainer {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -7,12 +7,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     text-align: center;
 }
-
-.calendarContainer > h1 {
+/*
+.calendarContainer>h1 {
     display: flex;
     justify-content: center;
     font-size: 70px;
+}
+
+@media (min-width: 600px) {
+    .calendarContainer {
+        font-size: 25px;
+    }
+} */
+
+/* Reduce spacing between numbers */
+.rdp-day {
+    padding: 5px !important;  /* Reduce padding inside day cells */
+    margin: 1px !important;   /* Reduce space between cells */
+    font-size: 25px !important;
+}
+
+/* Adjust the grid layout */
+.rdp {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Ensures 7 columns */
+    gap: 1px; /* Adjust spacing between numbers */
+    font-size: 1px;
+}
+
+/* Optional: Adjust calendar size */
+.rdp-table {
+    width: 80%;
 }

@@ -8,13 +8,16 @@ function PlcaceHeader() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
-        setFontSize(35);
+        setFontSize(45);
       }
-    };
+      else {
+        setFontSize(100);
+      }
+    }
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [window.innerWidth]);
 
   useEffect(() => {
     const updateTownName = () => {

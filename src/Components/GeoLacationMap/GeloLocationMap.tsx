@@ -12,6 +12,8 @@ import Point from "ol/geom/Point";
 import { Style, Icon } from "ol/style";
 import Infos from "../UserDate/UserDate"; 
 
+import "./style/GeoLocationStyle.css"
+
 const MapComponent: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<Map | null>(null);
@@ -85,8 +87,8 @@ const MapComponent: React.FC = () => {
   };
 
   return (
-    <div>
-      <div ref={mapRef} style={{ width: "100%", height: "800px", borderRadius: "5%" }} />
+    <div className="mapContainer">
+      <div ref={mapRef} className="mapStyle" />
     </div>
   );
 };

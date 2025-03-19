@@ -14,20 +14,23 @@ function Calendar() {
                 <DayPicker mode="single" selected={selected} onSelect={setSelected}
                     footer={selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."} />
                 <br />
-                <label htmlFor="">
-                    Phone number:
-                    <input type="number" placeholder="Phone number" />
-                </label>
-                <br />
-                <label htmlFor="">
-                    Email:
-                    <input type="email" placeholder="Email" />
-                </label>
-                <br />
-                <label htmlFor="">
-                    Discription:
-                    <input type="text" placeholder="Discription" />
-                </label>
+                <div>
+                    <label htmlFor="">
+                        Phone number:
+                        <input type="number" placeholder="Phone number" />
+                    </label>
+                    <br />
+                    <label htmlFor="">
+                        Email:
+                        <input type="email" placeholder="Email" />
+                    </label>
+                    <br />
+                    <label htmlFor="">
+                        Discription:
+                        <input type="text" placeholder="Discription" />
+                    </label>
+                </div>
+
             </form>
             <br />
         </div>
