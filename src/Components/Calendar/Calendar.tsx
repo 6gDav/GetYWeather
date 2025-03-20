@@ -10,7 +10,7 @@ function Calendar() {
         <div className="calendarContainer">
             <h1>Set an alart</h1>
             <br />
-            <form action="">
+            <form action="submitButtom have been clickd">
                 <div className="calendar">
                     <DayPicker mode="single" selected={selected} onSelect={setSelected} className="calendar"
                         footer={selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."}/>
@@ -34,7 +34,7 @@ function Calendar() {
                     </label>
                     <br />
                     <br />
-                    <button className="alartButtom">
+                    <button className="alartButtom" type="submit" onClick={() => {alert('Buttom has been clickd')}}>
                         Set Alart
                     </button>
                 </div>
