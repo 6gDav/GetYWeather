@@ -1,43 +1,99 @@
  .calendarContainer {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border: 5px solid #ffc107;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-/*
-.calendarContainer>h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 70px;
-}
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
 
-@media (min-width: 600px) {
-    .calendarContainer {
-        font-size: 25px;
-    }
-} */
+ .calendarContainer>h1 {
+     display: flex;
+     justify-content: center;
+     font-size: 70px;
+ }
 
-/* Reduce spacing between numbers */
-.rdp-day {
-    padding: 5px !important;  /* Reduce padding inside day cells */
-    margin: 1px !important;   /* Reduce space between cells */
-    font-size: 25px !important;
-}
+ .alartText {
+     font-size: 25px;
+     margin-top: 10px;
+ }
 
-/* Adjust the grid layout */
-.rdp {
+ .inputStyle {
+     font-size: 20px;
+     margin-top: 10px;
+     color: #2e2e2e;
+     font-weight: bold;
+     background-color: #ffc107;
+     border-radius: 25px;
+ }
+
+ .calendar {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Ensures 7 columns */
-    gap: 1px; /* Adjust spacing between numbers */
-    font-size: 1px;
-}
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+ .inputStyle::placeholder {
+     color: #2e2e2e;
+     font-style: italic;
+     text-align: center;
+ }
 
-/* Optional: Adjust calendar size */
-.rdp-table {
-    width: 80%;
-}
+ .alartButtom {
+     margin-top: 10px;
+     padding: 10px 20px;
+     background-color: #2e2e2e;
+     color: #ffc107;
+     border-radius: 25px;
+ }
+
+ .rdp-day {
+     padding: 5px !important;
+     margin: 1px !important;
+     font-size: 25px !important;
+ }
+
+ .rdp {
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     gap: 1px;
+     font-size: 1px;
+ }
+
+ .rdp-table {
+     width: 80%;
+ }
+
+ @media (max-width: 600px) {
+    .rdp-day {
+        padding: 5px !important;
+        margin: 1px !important;
+        font-size: 15px !important;
+    }
+
+    .inputStyle {
+        font-size: 20px;
+        margin-top: 2px;
+    }
+
+    label {
+        display: block; 
+    }
+
+    .calendarContainer>h1 {
+        font-size: 30px;
+    }
+
+    .alartText {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .inputStyle {
+        width: 100%; 
+    }
+
+    .calendarContainer {
+        margin-right: -45%;
+    }
+ }

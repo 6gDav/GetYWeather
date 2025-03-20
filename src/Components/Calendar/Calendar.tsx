@@ -11,26 +11,33 @@ function Calendar() {
             <h1>Set an alart</h1>
             <br />
             <form action="">
-                <DayPicker mode="single" selected={selected} onSelect={setSelected}
-                    footer={selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."} />
-                <br />
-                <div>
-                    <label htmlFor="">
-                        Phone number:
-                        <input type="number" placeholder="Phone number" />
-                    </label>
-                    <br />
-                    <label htmlFor="">
-                        Email:
-                        <input type="email" placeholder="Email" />
-                    </label>
-                    <br />
-                    <label htmlFor="">
-                        Discription:
-                        <input type="text" placeholder="Discription" />
-                    </label>
+                <div className="calendar">
+                    <DayPicker mode="single" selected={selected} onSelect={setSelected} className="calendar"
+                        footer={selected ? `Selected: ${selected.toLocaleDateString()}` : "Pick a day."}/>
                 </div>
 
+                <br />
+                <div>
+                    <label>
+                        <span className="alartText">Phone number: </span>
+                        <input className="inputStyle" type="number" placeholder="Phone number" />
+                    </label>
+                    <br />
+                    <label>
+                        <span className="alartText">Email: </span>
+                        <input className="inputStyle" type="email" placeholder="Email" />
+                    </label>
+                    <br />
+                    <label>
+                        <span className="alartText">Discription: </span>
+                        <input className="inputStyle" type="text" placeholder="Discription" />
+                    </label>
+                    <br />
+                    <br />
+                    <button className="alartButtom">
+                        Set Alart
+                    </button>
+                </div>
             </form>
             <br />
         </div>
