@@ -46,6 +46,8 @@ import Calendar from './Components/Calendar/Calendar';
 import './global.css'
 import { useEffect, useState } from 'react';
 
+import Feature from './Components/pages/Features';
+
 setupIonicReact();
 
 const App: React.FC = () => {
@@ -64,26 +66,20 @@ const App: React.FC = () => {
 
   return (
     <IonApp>
-      <IonContent className="body" scrollY={true}>
-        <IonReactRouter>
-          <div>
-            {!isMobil && <AppBar />}
-            {isMobil && <AppBarMobil />}
-            <div className="main-div2">
-              <PlcaceHeader />
-              <Clock />
-              <hr />
-              <WeatherInfos />
-              <hr />
-              <MapComponent />
-              <hr />
-              <Calendar />
-            </div>
-            <FooterSection />
-          </div>
-        </IonReactRouter>
+    <IonReactRouter>
+      {!isMobil && <AppBar />}
+      {isMobil && <AppBarMobil />}
+      <IonContent>
+        <IonRouterOutlet>
+          {/* <Route path="/home" component={HomePage} exact /> */}
+          <Route path="/feature" component={Feature} exact />
+          {/* <Route path="/pricing" component={Pricing} exact /> */}
+          {/* <Route path="/contact" component={Contact} exact /> */}
+          <Route exact path="/" render={() => <Redirect to="/home" />} />
+        </IonRouterOutlet>
       </IonContent>
-    </IonApp>
+    </IonReactRouter>
+  </IonApp>
   );
 }
 
