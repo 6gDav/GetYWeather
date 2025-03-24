@@ -15,6 +15,12 @@ export default async function GetCountryByCity(city: string): Promise<NullAndStr
         }
         else {
             console.error('City is not found');
+            if (confirm('Not existing city. Please enter an existing city.')) {
+                location.reload();
+            }
+            else {
+                location.reload();
+            }
             return null;
         }
     }
