@@ -42,12 +42,13 @@ import FooterSection from './Components/Footer/FooterSection';
 import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
 import MapComponent from './Components/GeoLacationMap/GeloLocationMap';
 import Calendar from './Components/Calendar/Calendar';
- 
+
 import './global.css'
 import { useEffect, useState } from 'react';
 
 import Feature from './Components/pages/Features';
 import HomaPage from './Components/pages/HomaPage';
+import Pricing from './Components/pages/Pricing';
 
 setupIonicReact();
 
@@ -67,20 +68,20 @@ const App: React.FC = () => {
 
   return (
     <IonApp>
-    <IonReactRouter>
-      {!isMobil && <AppBar />}
-      {isMobil && <AppBarMobil />}
-      <IonContent>
-        <IonRouterOutlet>
-          <Route path="/home" component={HomaPage} exact /> 
-          <Route path="/feature" component={Feature} exact />
-          {/* <Route path="/pricing" component={Pricing} exact /> */}
-          {/* <Route path="/contact" component={Contact} exact /> */}
-          <Route exact path="/" render={() => <Redirect to="/home" />} />
-        </IonRouterOutlet>
-      </IonContent>
-    </IonReactRouter>
-  </IonApp>
+      <IonReactRouter>
+        {!isMobil && <AppBar />}
+        {isMobil && <AppBarMobil />}
+        <IonContent>
+          <IonRouterOutlet>
+            <Route path="/home" component={HomaPage} exact />
+            <Route path="/feature" component={Feature} exact />
+            <Route path="/pricing" component={Pricing} exact />
+            {/* <Route path="/contact" component={Contact} exact /> */}
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
+          </IonRouterOutlet>
+        </IonContent>
+      </IonReactRouter>
+    </IonApp>
   );
 }
 

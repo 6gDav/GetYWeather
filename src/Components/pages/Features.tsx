@@ -1,6 +1,6 @@
 import React from 'react'
 import FooterSection from '../Footer/FooterSection';
-import { IonApp, IonRouterOutlet, setupIonicReact, IonContent, isPlatform } from '@ionic/react';
+import { IonContent } from '@ionic/react';
 
 import './style/PagesStyle.css'
 

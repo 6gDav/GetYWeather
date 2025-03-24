@@ -12,7 +12,6 @@ import '../../global.css';
 function HomaPage() {
   return (
     <IonContent class='body'>
-
       <div className='main-div'>
         <div className='main-div2'>
           <Clock />
@@ -23,7 +22,7 @@ function HomaPage() {
           <hr />
           <Calendar />
         </div>
-      <FooterSection />
+        <FooterSection />
       </div>
     </IonContent>
   )
