@@ -9,7 +9,7 @@ function Pricing() {
         <IonContent>
             <div className="feature-container">
                 <h1 className='pageTitle'>Pricing</h1>
-
+                <hr />
                 <br />
                 <div className="container py-3">
                     <main>

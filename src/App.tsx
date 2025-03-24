@@ -49,6 +49,7 @@ import { useEffect, useState } from 'react';
 import Feature from './Components/pages/Features';
 import HomaPage from './Components/pages/HomaPage';
 import Pricing from './Components/pages/Pricing';
+import Contact from './Components/pages/Contact';
 
 setupIonicReact();
 
@@ -76,7 +77,7 @@ const App: React.FC = () => {
             <Route path="/home" component={HomaPage} exact />
             <Route path="/feature" component={Feature} exact />
             <Route path="/pricing" component={Pricing} exact />
-            {/* <Route path="/contact" component={Contact} exact /> */}
+            <Route path="/contact" component={Contact} exact />
             <Route exact path="/" render={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
         </IonContent>

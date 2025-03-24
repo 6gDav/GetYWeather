@@ -1,0 +1,26 @@
+h2 {
+    font-size: 45px;
+}
+
+.peronalInfo {
+    background-color: #ffc107;
+    border: 5px solid #151414;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+li {
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.discription {
+    font-size: 20px;
+    color: #151414;
+}
+
+@media (max-width: 600px) {
+    .peronalInfo {
+        width: 80%;
+    }
+}
