@@ -34,7 +34,7 @@ import './theme/variables.css';
 
 import Infos from './Components/UserDate/UserDate';
 
-import AppBar from './Components/AppBar_and_UserInputsInBar/AppBar';
+import AppBar from './Components/AppBar_and_UserInputsInBar/NewAppBar';
 import AppBarMobil from './Components/AppBar_and_UserInputsInBar/AppBarMobil';
 import Clock from './Components/Clock/Clock';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
@@ -47,6 +47,7 @@ import './global.css'
 import { useEffect, useState } from 'react';
 
 import Feature from './Components/pages/Features';
+import HomaPage from './Components/pages/HomaPage';
 
 setupIonicReact();
 
@@ -71,7 +72,7 @@ const App: React.FC = () => {
       {isMobil && <AppBarMobil />}
       <IonContent>
         <IonRouterOutlet>
-          {/* <Route path="/home" component={HomePage} exact /> */}
+          <Route path="/home" component={HomaPage} exact /> 
           <Route path="/feature" component={Feature} exact />
           {/* <Route path="/pricing" component={Pricing} exact /> */}
           {/* <Route path="/contact" component={Contact} exact /> */}

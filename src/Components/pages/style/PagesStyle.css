@@ -1,0 +1,12 @@
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pageTitle {
+    font-size: 55px;
+    padding: 25px;
+}

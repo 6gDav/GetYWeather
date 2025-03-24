@@ -2,7 +2,7 @@ import React from 'react'
 import FooterSection from '../Footer/FooterSection';
 import { IonApp, IonRouterOutlet, setupIonicReact, IonContent, isPlatform } from '@ionic/react';
 
-import './PagesStyle.css'
+import './style/PagesStyle.css'
 
 function Features() {
   return (
