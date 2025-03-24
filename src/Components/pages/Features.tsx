@@ -107,8 +107,8 @@ function Features() {
         <br />
         <br />
 
-        <FooterSection />
       </div>
+      <FooterSection />
     </IonContent>
   )
 }

@@ -13,7 +13,7 @@ function Contact() {
                 <h1 className='pageTitle'>Contact</h1>
                 <hr />
                 <div className='peronalInfo'>
-                    <h2>Török Dávid</h2>
+                    <h2 style={{color: "#151414"}}>Török Dávid</h2>
                     <h3>Discription</h3>
                     <p className='discription'>Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                     <ul>
@@ -23,7 +23,7 @@ function Contact() {
                 </div>
                 <hr />
                 <div className='peronalInfo'>
-                    <h2>Bathó István Bence</h2>
+                    <h2 style={{color: "#151414"}}>Bathó István Bence</h2>
                     <h3>Discription</h3>
                     <p className='discription'>Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                     <ul>
@@ -33,7 +33,7 @@ function Contact() {
                 </div>
                 <hr />
                 <div className='peronalInfo'>
-                    <h2>Pócs Zsombor</h2>
+                    <h2 style={{color: "#151414"}}>Pócs Zsombor</h2>
                     <h3>Discription</h3>
                     <p className='discription'>Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                     <ul>

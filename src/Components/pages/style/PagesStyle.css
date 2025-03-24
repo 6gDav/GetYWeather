@@ -16,3 +16,10 @@ hr {
     border: 5px solid #000;
     margin-bottom: 50px;
 }
+
+@media (max-width: 600px) {
+    .feature-container {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
