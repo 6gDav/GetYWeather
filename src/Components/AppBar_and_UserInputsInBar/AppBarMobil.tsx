@@ -11,8 +11,7 @@ import {
 import './Styles/AppBar.css';
 
 import "./Styles/AppBarMobil.css"
-import Infos from '../UserDate/UserDate';
-import { makeToWorkTheClok } from '../Clock/MakeWorkTheClock';
+import { Link } from "react-router-dom";
 import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
 import { useTheme, useAppBar } from './Logic/AppBarCodeBehindMenagger';
@@ -65,16 +64,16 @@ export default function App() {
         <MDBCollapse open={showAnimated2}>
           <div className='bg-dark shadow-3 p-4'>
             <MDBBtn block className='border-bottom m-0' color='link'>
-              <p className='textFontSizeOfHader'>Home</p>
+              <Link to="/home" className="nav-link px-3 text-white">Home</Link>
             </MDBBtn>
             <MDBBtn block className='border-bottom m-0' color='link'>
-              <p className='textFontSizeOfHader'>Features</p>
+              <Link to="/feature" className="nav-link px-3 text-white">Feature</Link>
             </MDBBtn>
             <MDBBtn block className='border-bottom m-0' color='link'>
-              <p className='textFontSizeOfHader'>Pricing</p>
+              <Link to="/pricing" className="nav-link px-3 text-white">Pricing</Link>
             </MDBBtn>
             <MDBBtn block className='border-bottom m-0' color='link'>
-              <p className='textFontSizeOfHader'>Contact</p>
+              <Link to="/contact" className="nav-link px-3 text-white">Contact</Link>
             </MDBBtn>
             <input ref={searchInputRef} type="search" className="form-control form-control-dark text-bg-white" placeholder="Search" aria-label="Search" />
             <br />

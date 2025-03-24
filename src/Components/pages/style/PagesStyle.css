@@ -10,3 +10,9 @@
     font-size: 55px;
     padding: 25px;
 }
+
+hr {
+    width: 90%;
+    border: 5px solid #000;
+    margin-bottom: 50px;
+}
