@@ -54,6 +54,9 @@ import HomaPage from './Components/pages/HomaPage';
 import Pricing from './Components/pages/Pricing';
 import Contact from './Components/pages/Contact';
 
+//user administration
+import Login from './Components/pages/UserAdministration/Login';
+
 setupIonicReact();
 
 const App: React.FC = () => {
@@ -81,6 +84,7 @@ const App: React.FC = () => {
             <Route path="/feature" component={Feature} exact />
             <Route path="/pricing" component={Pricing} exact />
             <Route path="/contact" component={Contact} exact />
+            <Route path="/login" component={Login} exact />
             <Route exact path="/" render={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
         </IonContent>

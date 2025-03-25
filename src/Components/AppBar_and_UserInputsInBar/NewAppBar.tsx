@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useTheme, useAppBar } from './Logic/AppBarCodeBehindMenagger';
 import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
 import './Styles/AppBar.css';
+import { IonRouterLink } from '@ionic/react';
 
 const AppBar: React.FC = () => {
     // Search input manager
@@ -55,7 +56,9 @@ const AppBar: React.FC = () => {
 
                     {/* User Actions */}
                     <div className="text-end d-flex gap-2">
-                        <button type="button" className="btn btn-outline-light me-2">Login</button>
+                        <IonRouterLink href="/login" className="btn btn-outline-light me-2">
+                            Login
+                        </IonRouterLink>
                         <button type="button" className="btn btn-warning  me-2">Sign-up</button>
                         <label htmlFor="themeMode" className='textFontSizeOfHader'>
                             <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
