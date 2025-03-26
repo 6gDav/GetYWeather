@@ -34,7 +34,7 @@ function Login() {
               </div>
             </div>
 
-            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-4">Sign in</button>
+            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-4">Login</button>
 
             <div className="text-center">
               <p>Not a member? <br /> <a className='anchorStyle' href="#!">Register</a></p>
