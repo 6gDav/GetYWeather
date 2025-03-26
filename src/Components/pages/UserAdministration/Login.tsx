@@ -23,21 +23,21 @@ function Login() {
             <div className="row mb-4">
               <div className="col d-flex justify-content-center">
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="form2Example31" defaultChecked />
+                  <input className="form-check-input form-check-input" type="checkbox" id="form2Example31" defaultChecked />
                   <label className="form-check-label" htmlFor="form2Example31"> Remember me </label>
                 </div>
               </div>
 
               <div className="col">
 
-                <a href="#!">Forgot password?</a>
+                <a className='anchorStyle' href="#!">Forgot password?</a>
               </div>
             </div>
 
-            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block mb-4">Sign in</button>
+            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-4">Sign in</button>
 
             <div className="text-center">
-              <p>Not a member? <br /> <a href="#!">Register</a></p>
+              <p>Not a member? <br /> <a className='anchorStyle' href="#!">Register</a></p>
               <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
                 <i className="fab fa-facebook-f"></i>
               </button>
