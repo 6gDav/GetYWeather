@@ -46,10 +46,22 @@ export default async function ManageAPI(city: string, weatherType: weatherTypes)
             }
         } else {
             console.error(`Error fetching weather data: ${data.message}`);
+            if (confirm('Not existing city. Please enter an existing city.')) {
+                location.reload();
+            }
+            else {
+                location.reload();
+            }
             return null;
         }
     } catch (error) {
         console.error('Error fetching weather data:', error);
+        if (confirm('Not existing city. Please enter an existing city.')) {
+            location.reload();
+        }
+        else {
+            location.reload();
+        }
         return null;
     }
 }

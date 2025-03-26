@@ -4,4 +4,6 @@ FIXED it caused by the idiocy of the developer
 there is a gap in the buttom of the footer its sohws on a big 27" screen =>
 FIXED it caused by the lack of content 
 
-can t acces the TempatureImages images =>
+can t acces the TempatureImages images => NIOT SOLVED YET CUZ NOT NECESSARY TO USE IMGAES
+
+ManageAPI is sending too much confirm mirrors to prevent to colaps of the program, but working

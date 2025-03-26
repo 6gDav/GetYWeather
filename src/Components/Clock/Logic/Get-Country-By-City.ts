@@ -26,6 +26,12 @@ export default async function GetCountryByCity(city: string): Promise<NullAndStr
     }
     catch (error) {
         console.error('Error occurred:', error);
+        if (confirm('Not existing city. Please enter an existing city.')) {
+            location.reload();
+        }
+        else {
+            location.reload();
+        }
         return null;
     }
 }
