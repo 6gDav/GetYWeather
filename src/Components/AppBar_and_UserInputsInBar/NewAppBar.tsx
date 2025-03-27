@@ -59,7 +59,9 @@ const AppBar: React.FC = () => {
                         <IonRouterLink href="/login" className="btn btn-outline-light me-2">
                             Login
                         </IonRouterLink>
-                        <button type="button" className="btn btn-warning  me-2">Sign-up</button>
+                        <IonRouterLink href="/singup" className="btn btn-warning me-2">
+                            Sign-up
+                        </IonRouterLink>
                         <label htmlFor="themeMode" className='textFontSizeOfHader'>
                             <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
                         </label>

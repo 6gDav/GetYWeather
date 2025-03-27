@@ -56,6 +56,7 @@ import Contact from './Components/pages/Contact';
 
 //user administration
 import Login from './Components/pages/UserAdministration/Login';
+import SingUp from './Components/pages/UserAdministration/SingUp';
 
 setupIonicReact();
 
@@ -85,6 +86,7 @@ const App: React.FC = () => {
             <Route path="/pricing" component={Pricing} exact />
             <Route path="/contact" component={Contact} exact />
             <Route path="/login" component={Login} exact />
+            <Route path="/singup" component={SingUp} exact />
             <Route exact path="/" render={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
         </IonContent>
