@@ -7,7 +7,7 @@ const apiKey = '9dce43d6f9c9dd0aa623390f1f7343c8';
 export default async function ManageAPI(city: string, weatherType: weatherTypes): Promise<NullAndString> {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-        const responseForCards = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=hu&appid=${apiKey}`);
+        const responseForCards = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=en&appid=${apiKey}`);
 
         const data = await response.json();
         const data2 = await responseForCards.json();
