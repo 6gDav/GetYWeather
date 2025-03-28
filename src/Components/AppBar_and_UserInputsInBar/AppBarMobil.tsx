@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
 import { useTheme, useAppBar } from './Logic/AppBarCodeBehindMenagger';
+import { IonRouterLink } from '@ionic/react';
 
 export default function App() {
   const [showAnimated2, setShowAnimated2] = useState(false);
@@ -78,7 +79,9 @@ export default function App() {
             <input ref={searchInputRef} type="search" className="form-control form-control-dark text-bg-white" placeholder="Search" aria-label="Search" />
             <br />
             <button ref={searchButtomRef} onClick={handleClick} type="button" className="btn btn-outline-light">Search</button>
-            <button type="button" className="btn btn-outline-light me-2">Login</button>
+            <IonRouterLink href="/login" className="btn btn-outline-light me-2">
+              Login
+            </IonRouterLink>
             <button type="button" className="btn btn-warning  me-2">Sign-up</button>
             <label htmlFor="themeMode" className='textFontSizeOfHader' style={{ color: 'white' }}>
               <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
