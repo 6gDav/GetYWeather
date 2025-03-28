@@ -8,7 +8,7 @@ function Calendar() {
 
     return (
         <div className="calendarContainer">
-            <h1>Set an alart</h1>
+            <h1>Set an alert</h1>
             <br />
             <form action="submitButtom have been clickd">
                 <div className="calendar">
