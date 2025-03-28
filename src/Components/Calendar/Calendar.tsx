@@ -18,11 +18,7 @@ function Calendar() {
 
                 <br />
                 <div>
-                    <label>
-                        <span className="alartText">Phone number: </span>
-                        <input className="inputStyle" type="number" placeholder="Phone number" />
-                    </label>
-                    <br />
+                
                     <label>
                         <span className="alartText">Email: </span>
                         <input className="inputStyle" type="email" placeholder="Email" />
