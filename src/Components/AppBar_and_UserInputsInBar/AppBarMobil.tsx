@@ -82,7 +82,9 @@ export default function App() {
             <IonRouterLink href="/login" className="btn btn-outline-light me-2">
               Login
             </IonRouterLink>
-            <button type="button" className="btn btn-warning  me-2">Sign-up</button>
+            <IonRouterLink href="/singup" className="btn btn-warning me-2">
+              Sign-up
+            </IonRouterLink>
             <label htmlFor="themeMode" className='textFontSizeOfHader' style={{ color: 'white' }}>
               <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
             </label>

@@ -29,35 +29,19 @@ function Login() {
               </div>
 
               <div className="col">
-
-                <a className='anchorStyle' href="#!">Forgot password?</a>
+                <a className='anchorStyle' href="/forgotpassword">Forgot password?</a>
               </div>
             </div>
 
-            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-4">Login</button>
+            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-5">Login</button>
 
             <div className="text-center">
-              <p>Not a member? <br /> <a className='anchorStyle' href="#!">Register</a></p>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
-                <i className="fab fa-facebook-f"></i>
-              </button>
-
-              <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
-                <i className="fab fa-google"></i>
-              </button>
-
-              <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
-                <i className="fab fa-twitter"></i>
-              </button>
-
-              <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
-                <i className="fab fa-github"></i>
-              </button>
+              <p>Not a member? <br /> <a className='anchorStyle' href="/singup">Register</a></p>
             </div>
           </form>
+          <br />
         </div>
       </div>
-
     </IonContent>
   )
 }
