@@ -33,7 +33,7 @@ function SingUp() {
                     <IonRouterLink href="/login" className="btn btn-outline-light me-2">
                         Login
                     </IonRouterLink>
-                    <a href="./GUP.pdf" className='anchorStyle'>GUP documentaion.</a>
+                    <a href="./GUP.pdf" className="anchorStyle" target="_blank" rel="noopener noreferrer">GUP documentation.</a>
                 </div>
                 <br />
             </form>
