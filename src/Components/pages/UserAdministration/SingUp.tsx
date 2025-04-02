@@ -1,5 +1,4 @@
 import { IonContent, IonRouterLink } from '@ionic/react';
-import React from 'react'
 
 import '../style/SingUpStyle.css';
 import '../style/LoginStyle.css';
@@ -7,8 +6,8 @@ import '../style/LoginStyle.css';
 function SingUp() {
     return (
         <IonContent>
-            <form className='login-container'>
-                <h1 className='pagetitle'>Sign Up</h1>
+            <form className="login-container">
+                <h1 className="pagetitle">Sign Up</h1>
                 <div className="mb-3">
                     <label>User name</label>
                     <input type="text" className="form-control" placeholder="User name" />

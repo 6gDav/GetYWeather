@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Styles/ClockDesign.css'
-import Infos from '../UserDate/UserDate';
 
 const Clock: React.FC = () => {
     return (

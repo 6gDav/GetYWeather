@@ -1,6 +1,6 @@
 export default class Infos {
     //#region Town Name
-    private static townName: string = ''; //field
+    private static townName: string = ""; //field
 
     static get TownName(): string {
         return this.townName;
@@ -12,7 +12,7 @@ export default class Infos {
     //#endregion
 
     //#region Town Continent
-    private static continent: string = ''; //filed
+    private static continent: string = ""; //filed
 
     static get Continent(): string {
         return this.continent;
@@ -24,7 +24,7 @@ export default class Infos {
     //#endregion
 
     //#region json API Data
-    private static data: string = '';
+    private static data: string = "";
 
     static get Data(): string {
         return this.data;

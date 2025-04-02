@@ -1,7 +1,6 @@
 import { IonContent } from '@ionic/react';
-import React from 'react'
-
 import FooterSection from '../Footer/FooterSection';
+
 import './style/PagesStyle.css'
 
 function Pricing() {

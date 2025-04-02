@@ -27,12 +27,12 @@
  }
 
  .calendar {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+ }
+
  .inputStyle::placeholder {
      color: #2e2e2e;
      font-style: italic;
@@ -65,35 +65,35 @@
  }
 
  @media (max-width: 600px) {
-    .rdp-day {
-        padding: 5px !important;
-        margin: 1px !important;
-        font-size: 15px !important;
-    }
+     .rdp-day {
+         padding: 5px !important;
+         margin: 1px !important;
+         font-size: 15px !important;
+     }
 
-    .inputStyle {
-        font-size: 20px;
-        margin-top: 2px;
-    }
+     .inputStyle {
+         font-size: 20px;
+         margin-top: 2px;
+     }
 
-    label {
-        display: block; 
-    }
+     label {
+         display: block;
+     }
 
-    .calendarContainer>h1 {
-        font-size: 30px;
-    }
+     .calendarContainer>h1 {
+         font-size: 30px;
+     }
 
-    .alartText {
-        display: block;
-        margin-bottom: 5px;
-    }
+     .alartText {
+         display: block;
+         margin-bottom: 5px;
+     }
 
-    .inputStyle {
-        width: 100%; 
-    }
+     .inputStyle {
+         width: 100%;
+     }
 
-    .calendarContainer {
-        margin-right: -45%;
-    }
+     .calendarContainer {
+         margin-right: -45%;
+     }
  }

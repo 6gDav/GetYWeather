@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
-import { DayPicker } from "react-day-picker";
-import "react-day-picker/style.css";
-import "./style/Calendar.css";
+import React, { useRef, useState } from 'react';
+import { DayPicker } from 'react-day-picker';
+
+import 'react-day-picker/style.css';
+import './style/Calendar.css';
 
 function Calendar() {
     const [selected, setSelected] = useState<Date>();
@@ -14,11 +15,11 @@ function Calendar() {
         event.preventDefault();
 
         if (emailAddresRef.current?.value.trim()) {
-            alert('Ok');
+            alert("Ok");
             console.log(emailAddresRef.current?.value);
         }
         else {
-            alert('Please enter an email anddress.');
+            alert("Please enter an email anddress.");
         }
     }
 

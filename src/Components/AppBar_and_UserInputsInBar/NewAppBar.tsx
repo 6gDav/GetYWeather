@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory } from 'react-router-dom';
+import { IonRouterLink } from '@ionic/react';
+
 import { useTheme, useAppBar } from './Logic/AppBarCodeBehindMenagger';
 import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
 import './Styles/AppBar.css';
-import { IonRouterLink } from '@ionic/react';
 
 const AppBar: React.FC = () => {
     // Search input manager

@@ -32,22 +32,16 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 //#endregion
 
-/* Theme variables */
-import './theme/variables.css';
-
-import Infos from './Components/UserDate/UserDate';
-
-import AppBar from './Components/AppBar_and_UserInputsInBar/NewAppBar';
-import AppBarMobil from './Components/AppBar_and_UserInputsInBar/AppBarMobil';
-import Clock from './Components/Clock/Clock';
-import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
-import FooterSection from './Components/Footer/FooterSection';
-import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
-import Calendar from './Components/Calendar/Calendar';
-
-import './global.css'
 import { useEffect, useState } from 'react';
 
+
+
+//Naviagtion bars
+import AppBar from './Components/AppBar_and_UserInputsInBar/NewAppBar';
+import AppBarMobil from './Components/AppBar_and_UserInputsInBar/AppBarMobil';
+
+
+//Pages
 import Feature from './Components/pages/Features';
 import HomaPage from './Components/pages/HomaPage';
 import Pricing from './Components/pages/Pricing';
@@ -57,6 +51,10 @@ import Contact from './Components/pages/Contact';
 import Login from './Components/pages/UserAdministration/Login';
 import SingUp from './Components/pages/UserAdministration/SingUp';
 import ForgotPassword from './Components/pages/UserAdministration/ForgotPassword';
+
+//Theme variables 
+import './theme/variables.css';
+import './global.css'
 
 setupIonicReact();
 
@@ -70,8 +68,8 @@ const App: React.FC = () => {
       setIsMobil(window.innerWidth < 600);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (

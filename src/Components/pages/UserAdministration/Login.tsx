@@ -1,4 +1,3 @@
-import React from 'react'
 import { IonContent } from '@ionic/react';
 
 import '../style/LoginStyle.css'
@@ -6,9 +5,9 @@ import '../style/LoginStyle.css'
 function Login() {
   return (
     <IonContent>
-      <div className='login-container'>
+      <div className="login-container">
         <div>
-          <h1 className='pagetitle'>Login</h1>
+          <h1 className="pagetitle">Login</h1>
           <form>
             <div data-mdb-input-init className="form-outline mb-4">
               <input type="email" id="form2Example1" className="form-control" />
@@ -29,14 +28,14 @@ function Login() {
               </div>
 
               <div className="col">
-                <a className='anchorStyle' href="/forgotpassword">Forgot password?</a>
+                <a className="anchorStyle" href="/forgotpassword">Forgot password?</a>
               </div>
             </div>
 
             <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-5">Login</button>
 
             <div className="text-center">
-              <p>Not a member? <br /> <a className='anchorStyle' href="/singup">Register</a></p>
+              <p>Not a member? <br /> <a className="anchorStyle" href="/singup">Register</a></p>
             </div>
           </form>
           <br />

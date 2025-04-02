@@ -4,7 +4,7 @@ import countryCodeAndRealName from './GeoLocateComponentsForClock/CountryCode-An
 import GetTheValueViaKey from './Logic/Record-Iterator';
 import GetCountryByCity from './Logic/Get-Country-By-City';
 import GetContinentByCity from './Logic/Get-Continet-By-City-Name';
-import AskTheClockMaker from "./Logic/The-Actudal-Clcok-Of-The-Town";
+import AskTheClockMaker from './Logic/The-Actudal-Clcok-Of-The-Town';
 
 export function makeToWorkTheClok() {
     (async () => {
@@ -21,13 +21,12 @@ export function makeToWorkTheClok() {
                 AskTheClockMaker(cityContient, capitalName);
             }
             else {
-                console.error('Some components are null');
-
+                console.error("Some components are null");
             }
         }
         else {
-            console.error('Failded to request the current clock of the town.');
-            const clockHeadingEL: HTMLHeadElement = document.getElementById('clock')! as HTMLHeadElement;
+            console.error("Failded to request the current clock of the town.");
+            const clockHeadingEL: HTMLHeadElement = document.getElementById("clock")! as HTMLHeadElement;
             clockHeadingEL.innerText = "Faild to get the time.";
         }
 

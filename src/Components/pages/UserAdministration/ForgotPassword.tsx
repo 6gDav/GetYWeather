@@ -1,13 +1,12 @@
 import { IonContent } from '@ionic/react';
-import React from 'react'
 
 import '../style/LoginStyle.css'
 
 function ForgotPassword() {
     return (
         <IonContent>
-            <div className='login-container'>
-                <h1 className='pagetitle'>Forgot Password</h1>
+            <div className="login-container">
+                <h1 className="pagetitle">Forgot Password</h1>
                 <form>
                     <div data-mdb-input-init className="form-outline mb-3">
                         <input type="email" id="form2Example1" className="form-control" />

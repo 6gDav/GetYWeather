@@ -1,4 +1,4 @@
-import Infos from "../../UserDate/UserDate";
+import Infos from '../../UserDate/UserDate';
 
 type weatherTypes = 'townName' | 'main' | 'temperature' | 'humidity' | 'description' | 'clouds' | 'wind speed' | 'wind deg' | 'wind gust' | 'feels_like' | 'temp_min' | 'temp_max' | 'pressure';
 
@@ -15,38 +15,38 @@ export default async function ManageAPI(city: string, weatherType: weatherTypes)
 
         if (data.cod === 200) {
             switch (weatherType) {
-                case 'townName':
+                case "townName":
                     return data.name;
-                case 'main':
+                case "main":
                     return data.weather[0].main;
-                case 'temperature':
+                case "temperature":
                     return data.main.temp.toString();
-                case 'humidity':
+                case "humidity":
                     return data.main.humidity.toString();
-                case 'description':
+                case "description":
                     return data.weather[0].description;
-                case 'clouds':
+                case "clouds":
                     return data.clouds.all.toString();
-                case 'wind speed':
+                case "wind speed":
                     return data.wind.speed.toString();
-                case 'wind deg':
+                case "wind deg":
                     return data.wind.deg.toString();
-                case 'wind gust':
+                case "wind gust":
                     return data.wind.gust.toString();
-                case 'feels_like':
+                case "feels_like":
                     return data.main.feels_like.toString();
-                case 'temp_min':
+                case "temp_min":
                     return data.main.temp_min.toString();
-                case 'temp_max':
+                case "temp_max":
                     return data.main.temp_max.toString();
-                case 'pressure':
+                case "pressure":
                     return data.main.pressure.toString();
                 default:
-                    return 'Invalid weatherType';
+                    return "Invalid weatherType";
             }
         } else {
             console.error(`Error fetching weather data: ${data.message}`);
-            if (confirm('Not existing city. Please enter an existing city.')) {
+            if (confirm("Not existing city. Please enter an existing city.")) {
                 location.reload();
             }
             else {
@@ -55,8 +55,8 @@ export default async function ManageAPI(city: string, weatherType: weatherTypes)
             return null;
         }
     } catch (error) {
-        console.error('Error fetching weather data:', error);
-        if (confirm('Not existing city. Please enter an existing city.')) {
+        console.error("Error fetching weather data: ", error);
+        if (confirm("Not existing city. Please enter an existing city.")) {
             location.reload();
         }
         else {

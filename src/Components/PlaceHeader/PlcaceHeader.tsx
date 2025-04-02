@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Infos from '../UserDate/UserDate';
 
 function PlcaceHeader() {
@@ -15,8 +15,8 @@ function PlcaceHeader() {
       }
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [window.innerWidth]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function PlcaceHeader() {
   }, [Infos.TownName]);
 
   return (
-    <div style={{ fontSize: fontSize }}>{townName || 'Place not found'}</div>
+    <div style={{ fontSize: fontSize }}>{townName || "Place not found"}</div>
   );
 }
 

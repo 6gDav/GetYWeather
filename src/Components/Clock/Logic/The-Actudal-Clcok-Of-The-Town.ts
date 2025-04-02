@@ -21,7 +21,7 @@ const AskTheClockMaker = (continent: string, town: string) => {
   SetClokcToNull();
   intervall = setInterval(() => {
     let time = makeTheActualClcok(continent, town);
-    const clockHeadingEL = document.getElementById('clock')! as HTMLHeadElement;
+    const clockHeadingEL = document.getElementById("clock")! as HTMLHeadElement;
     clockHeadingEL.innerText = time;
   }, 1_000);
 };

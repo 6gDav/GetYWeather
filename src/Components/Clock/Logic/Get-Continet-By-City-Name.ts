@@ -1,14 +1,14 @@
 const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> => {
     //if (!city) return null; // Ha nincs város megadva, ne is próbálkozzon
 
-    const apiKey = 'b56615eb035c4135b259729965782e55';
+    const apiKey = "b56615eb035c4135b259729965782e55";
     const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(city ?? '')}&key=${apiKey}`;
 
     try {
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error('API request failed');
+            throw new Error("API request failed");
         }
 
         const data = await response.json();
@@ -22,8 +22,8 @@ const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> =
 
         return continent || null;
     } catch (error: any) {
-        console.error('Error occurred:', error.message);
-        if (confirm('Not existing city. Please enter an existing city.')) {
+        console.error("Error occurred: ", error.message);
+        if (confirm("Not existing city. Please enter an existing city.")) {
             location.reload();
         }
         else {

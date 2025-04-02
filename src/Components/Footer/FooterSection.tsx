@@ -1,7 +1,3 @@
-// source => https://alvarotrigo.com/blog/website-footers/
-
-import React from 'react'
-
 import './Style/FooterSection.css'
 
 function FooterSection() {

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Infos from '../UserDate/UserDate';
 import L from 'leaflet';
 import axios from 'axios';
-import "leaflet/dist/leaflet.css";
 
-import Infos from '../UserDate/UserDate';
+import 'leaflet/dist/leaflet.css';
+
 
 function NewGeoLocationMap() {
   const [townName, setTownName] = useState<string>(Infos.TownName);
@@ -16,10 +17,10 @@ function NewGeoLocationMap() {
 
     const fetchCoordinates = async () => {
       try {
-        const response = await axios.get('https://nominatim.openstreetmap.org/search', {
+        const response = await axios.get("https://nominatim.openstreetmap.org/search", {
           params: {
             q: town,
-            format: 'json',
+            format: "json",
             addressdetails: 1
           }
         });
@@ -28,10 +29,10 @@ function NewGeoLocationMap() {
           const { lat, lon } = response.data[0];
           setCoordinates(new L.LatLng(lat, lon));
         } else {
-          console.error('No coordinates found for the given town.');
+          console.error("No coordinates found for the given town.");
         }
       } catch (error) {
-        console.error('Error fetching coordinates:', error);
+        console.error("Error fetching coordinates: ", error);
       }
     };
 
@@ -40,7 +41,7 @@ function NewGeoLocationMap() {
 
   useEffect(() => {
     if (coordinates && !mapInstance) {
-      const map = L.map('map', {
+      const map = L.map("map", {
         center: coordinates,
         zoom: 5,
         dragging: true, 
@@ -49,7 +50,7 @@ function NewGeoLocationMap() {
         zoomControl: true 
       });
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
@@ -70,7 +71,7 @@ function NewGeoLocationMap() {
   }, [coordinates, townName, mapInstance]);
 
   return (
-    <div id="map" style={{ height: '500px' }}></div>
+    <div id="map" style={{ height: "500px" }}></div>
   );
 }
 

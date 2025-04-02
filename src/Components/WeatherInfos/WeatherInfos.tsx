@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import WeatherCards from './WeatherCards';
 import Infos from '../UserDate/UserDate';
 import ManageAPI from './Logic/ManaggeAPI';
 
 import './Styles/WeatherInfosStyling.css';
 
-import WeatherCards from './WeatherCards';
 
 const WeatherInfos = () => {
   //WaatherDatas
 
-  const [temperature, setTemperature] = useState<NullAndString>('Place not found');
+  const [temperature, setTemperature] = useState<NullAndString>("Place not found");
   const [minTempatre, setminTempature] = useState<NullAndString>();
   const [maxTempature, setMaxTempatre] = useState<NullAndString>();
   const [description, setDescription] = useState<NullAndString>();
@@ -21,13 +21,13 @@ const WeatherInfos = () => {
 
   //Dibamic Wather Styles
 
-  let [tempColors, setTempColors] = useState<string>('linear-gradient(90deg, rgb(51, 204, 255), blue, rgb(51, 102, 255), rgb(255, 255, 0), rgb(255, 153, 102), rgb(153, 0, 204), rgb(204, 0, 0))');
+  let [tempColors, setTempColors] = useState<string>("linear-gradient(90deg, rgb(51, 204, 255), blue, rgb(51, 102, 255), rgb(255, 255, 0), rgb(255, 153, 102), rgb(153, 0, 204), rgb(204, 0, 0))");
 
   useEffect(() => {
     const startManageAPI = () => {
       if (Infos.TownName) {
         //Description
-        ManageAPI(Infos.TownName, 'description')
+        ManageAPI(Infos.TownName, "description")
           .then((data) => {
             //console.log("API response:", data);
             setDescription(data);
@@ -35,26 +35,26 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Tempature
-        ManageAPI(Infos.TownName, 'temperature')
+        ManageAPI(Infos.TownName, "temperature")
           .then((data) => {
-            console.log("API response:", data);
+            console.log("API response: ", data);
             setTemperature(data);
             if (data) {
-              if (+data < -10) setTempColors('linear-gradient(to left, rgb(51, 204, 255) 30%, rgba(51, 204, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              else if (+data > -10 && +data < 0) setTempColors('linear-gradient(to left, blue 30%, rgba(0, 0, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              else if (+data > 0 && +data < 10) setTempColors('linear-gradient(to left, rgb(51, 102, 255) 30%, rgba(51, 102, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              else if (+data > 10 && +data < 20) setTempColors('linear-gradient(to left, rgb(255, 255, 0) 30%, rgba(255, 255, 0, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              else if (+data > 20 && +data < 30) setTempColors('linear-gradient(to left, rgb(255, 153, 102) 30%, rgba(255, 153, 102, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              else if (+data > 30 && +data < 40) setTempColors('linear-gradient(to left, rgb(153, 0, 204) 30%, rgba(153, 0, 204, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              else if (+data > 40) setTempColors('linear-gradient(to left, rgb(204, 0, 0) 30%, rgba(204, 0, 0, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)')
-              console.log('Enter in the dinamic color if');
+              if (+data < -10) setTempColors("linear-gradient(to left, rgb(51, 204, 255) 30%, rgba(51, 204, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              else if (+data > -10 && +data < 0) setTempColors("linear-gradient(to left, blue 30%, rgba(0, 0, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              else if (+data > 0 && +data < 10) setTempColors("linear-gradient(to left, rgb(51, 102, 255) 30%, rgba(51, 102, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              else if (+data > 10 && +data < 20) setTempColors("linear-gradient(to left, rgb(255, 255, 0) 30%, rgba(255, 255, 0, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              else if (+data > 20 && +data < 30) setTempColors("linear-gradient(to left, rgb(255, 153, 102) 30%, rgba(255, 153, 102, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              else if (+data > 30 && +data < 40) setTempColors("linear-gradient(to left, rgb(153, 0, 204) 30%, rgba(153, 0, 204, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              else if (+data > 40) setTempColors("linear-gradient(to left, rgb(204, 0, 0) 30%, rgba(204, 0, 0, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
+              console.log("Enter in the dinamic color if");
             }
             console.log(tempColors);
           })
           .catch(console.error);
 
         //Min tempature
-        ManageAPI(Infos.TownName, 'temp_min')
+        ManageAPI(Infos.TownName, "temp_min")
           .then((data) => {
             //console.log("API response:", data);
             setminTempature(data);
@@ -62,7 +62,7 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Max tempature
-        ManageAPI(Infos.TownName, 'temp_max')
+        ManageAPI(Infos.TownName, "temp_max")
           .then((data) => {
             //console.log("API response:", data);
             setMaxTempatre(data);
@@ -70,7 +70,7 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Humidity
-        ManageAPI(Infos.TownName, 'humidity')
+        ManageAPI(Infos.TownName, "humidity")
           .then((data) => {
             //console.log("API response:", data);
             setHumidity(data);
@@ -78,7 +78,7 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Feels Like 
-        ManageAPI(Infos.TownName, 'feels_like')
+        ManageAPI(Infos.TownName, "feels_like")
           .then((data) => {
             //console.log("API response:", data);
             setfeelsLike(data);
@@ -86,7 +86,7 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Clouds
-        ManageAPI(Infos.TownName, 'clouds')
+        ManageAPI(Infos.TownName, "clouds")
           .then((data) => {
             //console.log("API response:", data);
             setclouds(data);
@@ -94,7 +94,7 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Wind Speed
-        ManageAPI(Infos.TownName, 'wind speed')
+        ManageAPI(Infos.TownName, "wind speed")
           .then((data) => {
             //console.log("API response:", data);
             setwindSpeed(data);
@@ -102,7 +102,7 @@ const WeatherInfos = () => {
           .catch(console.error);
 
         //Pressure
-        ManageAPI(Infos.TownName, 'pressure')
+        ManageAPI(Infos.TownName, "pressure")
           .then((data) => {
             //console.log("API response:", data);
             setpressure(data);
@@ -124,36 +124,36 @@ const WeatherInfos = () => {
       setIsMobil(window.innerWidth < 600);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className='mainDiv'>
+    <div className="mainDiv">
       <main>
-        <div className='tempatureDiv' style={{ background: tempColors }}>
-          <h1 className='tempaterureHeader'> {temperature} °C</h1>
+        <div className="tempatureDiv" style={{ background: tempColors }}>
+          <h1 className="tempaterureHeader"> {temperature} °C</h1>
         </div>
-        <div className='secodanryTemps'>
+        <div className="secodanryTemps">
           <h2>Max Temp: <p style={{ fontSize: "45px", color: "red" }}>{maxTempature} °C</p></h2>
-          {!isMobil && <div className='lineDiv' />}
-          {isMobil && <div className='lineDiv' />}
+          {!isMobil && <div className="lineDiv" />}
+          {isMobil && <div className="lineDiv" />}
 
           <h2>Min Temp: <p style={{ fontSize: "45px", color: "blue" }}>{minTempatre} °C</p></h2>
         </div>
-        <div>
-          <h2 className='feelsLike'>Feels Like: {feelsLike} °C</h2>
+        <div>"
+          <h2 className="feelsLike">Feels Like: {feelsLike} °C</h2>
         </div>
 
-        <hr className='hrColor' />
+        <hr className="hrColor" />
 
         {/* first row  */}
-        <div className='otherInfosDiv'>
-          <div className='tileStyleContainer'>
+        <div className="otherInfosDiv">
+          <div className="tileStyleContainer">
             <h2>Description: <br /> <p style={{ fontSize: "50px" }}>{description}</p></h2>
           </div>
           <br />
-          <div className='tileStyleContainer'>
+          <div className="tileStyleContainer">
             <h2>Humidity: <br /> <p style={{ fontSize: "50px" }}>{humidity}</p></h2>
           </div>
         </div>
@@ -161,12 +161,12 @@ const WeatherInfos = () => {
         <br />
 
         {/* second row */}
-        <div className='otherInfosDiv'>
-          <div className='tileStyleContainer'>
+        <div className="otherInfosDiv">
+          <div className="tileStyleContainer">
             <h2>Clouds percentage: <br /> <p style={{ fontSize: "50px" }}>{clouds} %</p></h2>
           </div>
           <br />
-          <div className='tileStyleContainer'>
+          <div className="tileStyleContainer">
             <h2>Wind Speed: <br /> <p style={{ fontSize: "50px" }}>{windSpeed} km/h</p></h2>
           </div>
         </div>
@@ -174,20 +174,20 @@ const WeatherInfos = () => {
         <br />
 
         {/* last row */}
-        <div className='otherInfosDiv'>
-          <div className='tileStyleContainer2'>
+        <div className="otherInfosDiv">
+          <div className="tileStyleContainer2">
             <h2>Pressure: <br /> <p style={{ fontSize: "50px" }}>{pressure} hPa</p> </h2>
           </div>
         </div>
 
-        <hr className='hrColor' />
+        <hr className="hrColor" />
 
-        <div className='forcast'>
-          <h2 className='forcastHeading'>Forcast</h2>
+        <div className="forcast">
+          <h2 className="forcastHeading">Forcast</h2>
           <br />
 
           {/* cards */}
-          <div className='forcastDiv'>
+          <div className="forcastDiv">
             <br />
             <WeatherCards />
           </div>
