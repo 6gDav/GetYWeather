@@ -15,10 +15,10 @@ function Features() {
         <div className="row featurette">
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Forcasting<span className="text-body-secondary"></span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p className="lead">This is provide future weather datails, like temperature and a desription about the weather.</p>
           </div>
           <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/ForcastingImage.png" width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
@@ -29,11 +29,11 @@ function Features() {
         {/* Set an Alart */}
         <div className="row featurette">
           <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/SetAnAlert.png" width="500" height="500" alt="Forecasting Image" />
           </div>
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Set an Alart<span className="text-body-secondary"></span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p className="lead">This feature allows you to set an alarm with the desription to what do want to on that day.</p>
           </div>
         </div>
 
@@ -59,11 +59,11 @@ function Features() {
         {/* World wide clock */}
         <div className="row featurette">
           <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/WorlWideClock.png" width="500" height="500" alt="Forecasting Image" />
           </div>
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">World wide clock<span className="text-body-secondary"></span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p className="lead">This clock is going to show the exact time in your desired town along with weather datas.</p>
           </div>
         </div>
 
@@ -75,10 +75,10 @@ function Features() {
         <div className="row featurette">
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Your location on a Map<span className="text-body-secondary"></span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p className="lead">The map will show the city which you searched for.</p>
           </div>
           <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/Map.png" width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
@@ -89,11 +89,11 @@ function Features() {
         {/* Set a Theme */}
         <div className="row featurette">
           <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/Theme.png" width="500" height="500" alt="Forecasting Image" />
           </div>
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Set a Theme<span className="text-body-secondary"></span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p className="lead">This is a basic function on every web page. This basically allows you to change the color of the page.</p>
           </div>
         </div>
 
@@ -105,10 +105,10 @@ function Features() {
         <div className="row featurette">
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Responsive design<span className="text-body-secondary"></span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <p className="lead">This is a basic function too. If you set the page width lower or higher the responsibility will adjust the components in the right position.</p>
           </div>
           <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/Responsive.png" width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
