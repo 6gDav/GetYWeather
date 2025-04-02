@@ -18,6 +18,9 @@ const WeatherInfos = () => {
   const [clouds, setclouds] = useState<NullAndString>();
   const [windSpeed, setwindSpeed] = useState<NullAndString>();
   const [pressure, setpressure] = useState<NullAndString>();
+  const [winddeg, setwinddeg] = useState<NullAndString>();
+  const [windgust, setwindgust] = useState<NullAndString>();
+
 
   //Dibamic Wather Styles
 
@@ -37,7 +40,7 @@ const WeatherInfos = () => {
         //Tempature
         ManageAPI(Infos.TownName, "temperature")
           .then((data) => {
-            console.log("API response: ", data);
+            //console.log("API response: ", data);
             setTemperature(data);
             if (data) {
               if (+data < -10) setTempColors("linear-gradient(to left, rgb(51, 204, 255) 30%, rgba(51, 204, 255, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
@@ -47,9 +50,9 @@ const WeatherInfos = () => {
               else if (+data > 20 && +data < 30) setTempColors("linear-gradient(to left, rgb(255, 153, 102) 30%, rgba(255, 153, 102, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
               else if (+data > 30 && +data < 40) setTempColors("linear-gradient(to left, rgb(153, 0, 204) 30%, rgba(153, 0, 204, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
               else if (+data > 40) setTempColors("linear-gradient(to left, rgb(204, 0, 0) 30%, rgba(204, 0, 0, 0.7) 35%, rgba(255, 255, 255, 0.7) 40%, white 45%)")
-              console.log("Enter in the dinamic color if");
+              //console.log("Enter in the dinamic color if");
             }
-            console.log(tempColors);
+            //console.log(tempColors);
           })
           .catch(console.error);
 
@@ -108,6 +111,22 @@ const WeatherInfos = () => {
             setpressure(data);
           })
           .catch(console.error);
+
+        //Wind deg
+        ManageAPI(Infos.TownName, "wind deg")
+          .then((data) => {
+            //console.log("API response:", data);
+            setwinddeg(data);
+          })
+          .catch(console.error);
+
+        //Wind gust
+        ManageAPI(Infos.TownName, "wind gust")
+          .then((data) => {
+            //console.log("API response:", data);
+            setwindgust(data);
+          })
+          .catch(console.error);
       }
     }
 
@@ -141,7 +160,7 @@ const WeatherInfos = () => {
 
           <h2>Min Temp: <p style={{ fontSize: "45px", color: "blue" }}>{minTempatre} °C</p></h2>
         </div>
-        <div>"
+        <div>
           <h2 className="feelsLike">Feels Like: {feelsLike} °C</h2>
         </div>
 
@@ -168,6 +187,19 @@ const WeatherInfos = () => {
           <br />
           <div className="tileStyleContainer">
             <h2>Wind Speed: <br /> <p style={{ fontSize: "50px" }}>{windSpeed} km/h</p></h2>
+          </div>
+        </div>
+
+        <br />
+
+        {/* thrred row */}
+        <div className="otherInfosDiv">
+          <div className="tileStyleContainer">
+            <h2>Wind deg: <br /> <p style={{ fontSize: "50px" }}>{winddeg}°</p></h2>
+          </div>
+          <br />
+          <div className="tileStyleContainer">
+            <h2>Wind Gust: <br /> <p style={{ fontSize: "50px" }}>{windgust} km/h</p></h2>
           </div>
         </div>
 

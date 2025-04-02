@@ -33,7 +33,7 @@ function WeatherCards() {
       setinfos(Infos.Data);
     }
     catch (error) {
-      console.log('asdasd' + error);
+      console.log("asdasd" + error);
     }
   }, [Infos.Data]);
 
