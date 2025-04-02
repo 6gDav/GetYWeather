@@ -43,7 +43,6 @@ import Clock from './Components/Clock/Clock';
 import PlcaceHeader from './Components/PlaceHeader/PlcaceHeader';
 import FooterSection from './Components/Footer/FooterSection';
 import WeatherInfos from './Components/WeatherInfos/WeatherInfos';
-import MapComponent from './Components/GeoLacationMap/GeloLocationMap';
 import Calendar from './Components/Calendar/Calendar';
 
 import './global.css'
