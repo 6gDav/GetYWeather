@@ -25,11 +25,12 @@ const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> =
         console.error("Error occurred: ", error.message);
         if (confirm("Not existing city. Please enter an existing city.")) {
             location.reload();
+            return null;
         }
         else {
             location.reload();
+            return null;
         }
-        return null;
     }
 };
 
