@@ -7,3 +7,5 @@ FIXED it caused by the lack of content
 can t acces the TempatureImages images => NIOT SOLVED YET CUZ NOT NECESSARY TO USE IMGAES
 
 ManageAPI is sending too much confirm mirrors to prevent to colaps of the program, but working
+
+GeoLocateMap very clumsy but working really well.

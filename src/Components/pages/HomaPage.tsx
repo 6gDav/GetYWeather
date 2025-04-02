@@ -3,7 +3,7 @@ import { IonContent } from '@ionic/react';
 
 import Clock from '../Clock/Clock'
 import WeatherInfos from '../WeatherInfos/WeatherInfos';
-import MapComponent from '../GeoLacationMap/GeloLocationMap';
+import NewGeoLocationMap from '../GeoLacationMap/NewGeoLocationMap';
 import Calendar from '../Calendar/Calendar';
 import FooterSection from '../Footer/FooterSection';
 
@@ -21,7 +21,7 @@ function HomaPage() {
           <hr />
           <WeatherInfos />
           <hr />
-          <MapComponent />
+          <NewGeoLocationMap />
           <hr />
           <Calendar />
         </div>
