@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './Styles/ClockDesign.css'
 
 const Clock: React.FC = () => {

@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import Infos from '../UserDate/UserDate';
 
 function PlcaceHeader() {
+  //Varibles
   const [fontSize, setFontSize] = useState<number>(100);
   const [townName, setTownName] = useState<string>(Infos.TownName);
 
+  //Change chanckers
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
@@ -19,6 +21,7 @@ function PlcaceHeader() {
     return () => window.removeEventListener("resize", handleResize);
   }, [window.innerWidth]);
 
+  //Set the town names
   useEffect(() => {
     const updateTownName = () => {
       setTownName(Infos.TownName);

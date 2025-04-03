@@ -10,4 +10,4 @@ ManageAPI is sending too much confirm mirrors to prevent to colaps of the progra
 
 GeoLocateMap very clumsy but working really well.
 
-Some cases when the user hit page reload the Searchbar throw an error to not an existing city
+There are some cases when the user hit page reload the Searchbar throw an error to not an existing city sometimes occur sometimes not.

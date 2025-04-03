@@ -10,7 +10,7 @@ export function makeToWorkTheClok() {
     (async () => {
         const town: string = Infos.TownName;
         let counntry: NullAndString = await GetCountryByCity(town);
-
+    
         if (counntry) {
             const fullNameOfCountry: NullAndString = GetTheValueViaKey(countryCodeAndRealName, counntry);
             const capitalName: NullAndString = GetTheValueViaKey(stateAndCapital, fullNameOfCountry ?? "");

@@ -154,11 +154,11 @@ const WeatherInfos = () => {
           <h1 className="tempaterureHeader"> {temperature} °C</h1>
         </div>
         <div className="secodanryTemps">
-          <h2>Max Temp: <p style={{ fontSize: "45px", color: "red" }}>{maxTempature} °C</p></h2>
+          <h2>Min Temp: <p style={{ fontSize: "45px", color: "blue" }}>{minTempatre} °C</p></h2>
           {!isMobil && <div className="lineDiv" />}
           {isMobil && <div className="lineDiv" />}
 
-          <h2>Min Temp: <p style={{ fontSize: "45px", color: "blue" }}>{minTempatre} °C</p></h2>
+          <h2>Max Temp: <p style={{ fontSize: "45px", color: "red" }}>{maxTempature} °C</p></h2>
         </div>
         <div>
           <h2 className="feelsLike">Feels Like: {feelsLike} °C</h2>
