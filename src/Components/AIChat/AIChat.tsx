@@ -2,6 +2,8 @@ import { MouseEvent } from 'react'
 
 import './Styles/AIChatContainer.css'
 
+import AiChat from '../../../public/Images/AIChat.png';
+
 function AIChat() {
     const ManageAiButtom = (event: MouseEvent) => {
         event.preventDefault();
@@ -11,7 +13,7 @@ function AIChat() {
     return (
         <div className="chatContainer">
             <button className="buttom" onClick={ManageAiButtom}>
-                <img className="image" src="../../../public/Images/Aichat.jpg" alt="aipicture" title="Ask our AI" />
+                <img className="image" src={AiChat} alt="aipicture" title="Ask our AI" />
             </button>
         </div>
     )
