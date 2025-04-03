@@ -16,12 +16,12 @@ function Login() {
           <h1 className="pagetitle">Login</h1>
           <form>
             <div data-mdb-input-init className="form-outline mb-4">
-              <input type="email" id="form2Example1" className="form-control" />
+              <input type="email" id="form2Example1" className="form-control" required/>
               <label className="form-label" htmlFor="form2Example1">Email address</label>
             </div>
 
             <div data-mdb-input-init className="form-outline mb-4">
-              <input type="password" id="form2Example2" className="form-control" />
+              <input type="password" id="form2Example2" className="form-control" required/>
               <label className="form-label" htmlFor="form2Example2">Password</label>
             </div>
 

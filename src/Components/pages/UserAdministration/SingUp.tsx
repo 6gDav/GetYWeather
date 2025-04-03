@@ -16,19 +16,19 @@ function SingUp() {
                 <h1 className="pagetitle">Sign Up</h1>
                 <div className="mb-3">
                     <label>User name</label>
-                    <input type="text" className="form-control" placeholder="User name" />
+                    <input type="text" className="form-control" placeholder="User name" required/>
                 </div>
                 <div className="mb-3">
                     <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <input type="email" className="form-control" placeholder="Enter email" required/>
                 </div>
                 <div className="mb-3">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <input type="password" className="form-control" placeholder="Enter password" required/>
                 </div>
                 <div className="mb-3">
                     <label>Password again</label>
-                    <input type="password" className="form-control" placeholder="Enter password again" />
+                    <input type="password" className="form-control" placeholder="Enter password again" required/>
                 </div>
                 <br />
                 <div className="d-grid gap-3 justify-content-center mb-5">

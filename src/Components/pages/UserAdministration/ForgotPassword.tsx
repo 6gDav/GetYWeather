@@ -15,7 +15,7 @@ function ForgotPassword() {
                 <h1 className="pagetitle">Forgot Password</h1>
                 <form>
                     <div data-mdb-input-init className="form-outline mb-3">
-                        <input type="email" id="form2Example1" className="form-control" />
+                        <input type="email" id="form2Example1" className="form-control" required/>
                         <label className="form-label" htmlFor="form2Example1">Email address</label>
                     </div>
 
