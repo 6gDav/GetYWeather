@@ -4,6 +4,14 @@ import { IonContent } from '@ionic/react';
 
 import './style/PagesStyle.css'
 
+import Forcast from '../../../public/Images/ForcastingImage.png';
+import SetAnAlart from '../../../public/Images/SetAnAlert.png';
+import AiChat from '../../../public/Images/AIChat.png';
+import Clcock from '../../../public/Images/WorlWideClock.png';
+import Map from '../../../public/Images/Map.png';
+import SetATheme from '../../../public/Images/Theme.png';
+import ResponsiveDesign from '../../../public/Images/Responsive.png';
+
 function Features() {
   return (
     <IonContent>
@@ -18,7 +26,7 @@ function Features() {
             <p className="lead">This is provide future weather datails, like temperature and a desription about the weather.</p>
           </div>
           <div className="col-md-5">
-            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/ForcastingImage.png" width="500" height="500" alt="Forecasting Image" />
+            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={Forcast} width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
@@ -29,7 +37,7 @@ function Features() {
         {/* Set an Alart */}
         <div className="row featurette">
           <div className="col-md-5">
-          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/SetAnAlert.png" width="500" height="500" alt="Forecasting Image" />
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={SetAnAlart} width="500" height="500" alt="Forecasting Image" />
           </div>
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Set an Alart<span className="text-body-secondary"></span></h2>
@@ -48,7 +56,7 @@ function Features() {
             <p className="lead">You can make a simple converstation about the weather.</p>
           </div>
           <div className="col-md-5">
-          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/AIChat.png" width="500" height="500" alt="Forecasting Image" />
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={AiChat} width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
@@ -59,7 +67,7 @@ function Features() {
         {/* World wide clock */}
         <div className="row featurette">
           <div className="col-md-5">
-          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/WorlWideClock.png" width="500" height="500" alt="Forecasting Image" />
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={Clcock} width="500" height="500" alt="Forecasting Image" />
           </div>
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">World wide clock<span className="text-body-secondary"></span></h2>
@@ -78,7 +86,7 @@ function Features() {
             <p className="lead">The map will show the city which you searched for.</p>
           </div>
           <div className="col-md-5">
-          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/Map.png" width="500" height="500" alt="Forecasting Image" />
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={Map} width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
@@ -89,7 +97,7 @@ function Features() {
         {/* Set a Theme */}
         <div className="row featurette">
           <div className="col-md-5">
-          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/Theme.png" width="500" height="500" alt="Forecasting Image" />
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={SetATheme} width="500" height="500" alt="Forecasting Image" />
           </div>
           <div className="col-md-7">
             <h2 className="featurette-heading fw-normal lh-1">Set a Theme<span className="text-body-secondary"></span></h2>
@@ -108,7 +116,7 @@ function Features() {
             <p className="lead">This is a basic function too. If you set the page width lower or higher the responsibility will adjust the components in the right position.</p>
           </div>
           <div className="col-md-5">
-          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../../../public/Images/Responsive.png" width="500" height="500" alt="Forecasting Image" />
+          <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src={ResponsiveDesign} width="500" height="500" alt="Forecasting Image" />
           </div>
         </div>
 
