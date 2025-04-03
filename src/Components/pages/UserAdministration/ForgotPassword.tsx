@@ -1,8 +1,14 @@
+import { MouseEvent } from 'react';
 import { IonContent } from '@ionic/react';
 
 import '../style/LoginStyle.css'
 
 function ForgotPassword() {
+    const SenButtomMangger = (event: MouseEvent) => {
+        alert("Enter an Email adress.");
+        event.preventDefault();
+    };
+
     return (
         <IonContent>
             <div className="login-container">
@@ -13,8 +19,8 @@ function ForgotPassword() {
                         <label className="form-label" htmlFor="form2Example1">Email address</label>
                     </div>
 
-                    <div  className="d-grid gap-3 justify-content-center">
-                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-5">Send</button>
+                    <div className="d-grid gap-3 justify-content-center">
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-5" onClick={SenButtomMangger}>Send</button>
                     </div>
                 </form>
             </div>

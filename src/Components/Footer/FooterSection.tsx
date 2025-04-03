@@ -1,6 +1,12 @@
+import { MouseEvent } from 'react';
 import './Style/FooterSection.css'
 
 function FooterSection() {
+    const SenButtomMangger = (event: MouseEvent) => {
+        alert("Enter an Email adress.");
+        event.preventDefault();
+    };
+
     return (
         <footer className="footer-section">
             <div className="container">
@@ -66,7 +72,7 @@ function FooterSection() {
                                 <div className="subscribe-form">
                                     <form action="#">
                                         <input type="text" placeholder="Email Address" />
-                                        <button><i className="fab fa-telegram-plane">Send</i></button>
+                                        <button><i className="fab fa-telegram-plane" onClick={SenButtomMangger}>Send</i></button>
                                     </form>
                                 </div>
                             </div>

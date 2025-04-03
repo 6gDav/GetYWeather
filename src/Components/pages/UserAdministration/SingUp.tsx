@@ -1,9 +1,15 @@
+import { MouseEvent } from 'react';
 import { IonContent, IonRouterLink } from '@ionic/react';
 
 import '../style/SingUpStyle.css';
 import '../style/LoginStyle.css';
 
 function SingUp() {
+    const SenButtomMangger = (event: MouseEvent) => {
+        alert("Enter an Email adress.");
+        event.preventDefault();
+    };
+
     return (
         <IonContent>
             <form className="login-container">
@@ -26,9 +32,7 @@ function SingUp() {
                 </div>
                 <br />
                 <div className="d-grid gap-3 justify-content-center mb-5">
-                    <button type="submit" className="btn btn-warning">
-                        Sign Up
-                    </button>
+                    <button type="submit" className="btn btn-warning" onClick={SenButtomMangger}>Sign Up</button>
                     <IonRouterLink href="/login" className="btn btn-outline-light me-2">
                         Login
                     </IonRouterLink>

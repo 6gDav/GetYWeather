@@ -1,8 +1,14 @@
+import { MouseEvent } from 'react';
 import { IonContent } from '@ionic/react';
 
 import '../style/LoginStyle.css'
 
 function Login() {
+  const SenButtomMangger = (event: MouseEvent) => {
+    alert("Enter an Email adress.");
+    event.preventDefault();
+  };
+
   return (
     <IonContent>
       <div className="login-container">
@@ -32,7 +38,7 @@ function Login() {
               </div>
             </div>
 
-            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-5">Login</button>
+            <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-block mb-5" onClick={SenButtomMangger}>Login</button>
 
             <div className="text-center">
               <p>Not a member? <br /> <a className="anchorStyle" href="/singup">Register</a></p>
