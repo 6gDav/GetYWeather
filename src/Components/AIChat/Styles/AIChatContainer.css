@@ -1,0 +1,32 @@
+.chatContainer {
+    position: fixed;
+    left: 90%;
+    top: 80%;
+    z-index: 1000;
+}
+
+.buttom {
+    border-radius: 50%;
+}
+
+.image {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.buttom:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 600px) {
+    .chatContainer {
+        left: 80%;
+    }
+
+    .image {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
+}
