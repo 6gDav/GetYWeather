@@ -16,31 +16,31 @@ export default async function ManageAPI(city: string, weatherType: weatherTypes)
         if (data.cod === 200) {
             switch (weatherType) {
                 case "townName":
-                    return data.name;
+                    return data.name || "Unknown";
                 case "main":
-                    return data.weather[0].main;
+                    return data.weather?.[0]?.main || "Unknown";
                 case "temperature":
-                    return data.main.temp.toString();
+                    return data.main?.temp?.toString() || "N/A";
                 case "humidity":
-                    return data.main.humidity.toString();
+                    return data.main?.humidity?.toString() || "N/A";
                 case "description":
-                    return data.weather[0].description;
+                    return data.weather?.[0]?.description || "N/A";
                 case "clouds":
-                    return data.clouds.all.toString();
+                    return data.clouds?.all?.toString() || "N/A";
                 case "wind speed":
-                    return data.wind.speed.toString();
+                    return data.wind?.speed?.toString() || "N/A";
                 case "wind deg":
-                    return data.wind.deg.toString();
+                    return data.wind?.deg?.toString() || "N/A";
                 case "wind gust":
-                    return data.wind.gust.toString();
+                    return data.wind?.gust?.toString() || "N/A";
                 case "feels_like":
-                    return data.main.feels_like.toString();
+                    return data.main?.feels_like?.toString() || "N/A";
                 case "temp_min":
-                    return data.main.temp_min.toString();
+                    return data.main?.temp_min?.toString() || "N/A";
                 case "temp_max":
-                    return data.main.temp_max.toString();
+                    return data.main?.temp_max?.toString() || "N/A";
                 case "pressure":
-                    return data.main.pressure.toString();
+                    return data.main?.pressure?.toString() || "N/A";
                 default:
                     return "Invalid weatherType";
             }
@@ -55,7 +55,7 @@ export default async function ManageAPI(city: string, weatherType: weatherTypes)
             return null;
         }
     } catch (error) {
-        console.error("Error fetching weather data: ", error);
+        console.error("Error fetching weather data: " + error);
         if (confirm("Not existing city. Please enter an existing city.")) {
             location.reload();
         }

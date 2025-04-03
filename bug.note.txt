@@ -9,3 +9,5 @@ can t acces the TempatureImages images => NIOT SOLVED YET CUZ NOT NECESSARY TO U
 ManageAPI is sending too much confirm mirrors to prevent to colaps of the program, but working
 
 GeoLocateMap very clumsy but working really well.
+
+Some cases when the user hit page reload the Searchbar throw an error to not an existing city
