@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { DayPicker } from 'react-day-picker';
+import sendEmail from '../EmailSend';
 
 import 'react-day-picker/style.css';
 import './style/Calendar.css';
@@ -13,13 +14,16 @@ function Calendar() {
 
     const setAlert = (event: React.FormEvent) => {
         event.preventDefault();
+        const email = emailAddresRef.current?.value.trim() ?? "" ;
+        const currentdate = new Date();
 
-        if (emailAddresRef.current?.value.trim()) {
+        if (email || email === "" || selected != undefined || (selected != undefined && (selected as Date).getDay() >= currentdate.getDay()) || (selected != undefined && (selected as Date).getMonth() >= currentdate.getMonth()) ||(selected != undefined && (selected as Date).getFullYear() >= currentdate.getFullYear())) {
             alert("Ok");
             console.log(emailAddresRef.current?.value);
+            sendEmail("Notification setted to " + selected + " date", "We will notify you about the weather. " + descriptionRef , email, email);
         }
         else {
-            alert("Please enter an email anddress.");
+            alert("Please enter an email anddress or a valid date.");
         }
     }
 

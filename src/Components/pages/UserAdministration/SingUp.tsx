@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from 'react';
 import { IonContent, IonRouterLink } from '@ionic/react';
-
+import sendEmail from '../../EmailSend';
 import store from '../../storage';
 
 import '../style/SingUpStyle.css';
@@ -18,14 +18,7 @@ function SingUp() {
         if (username && email && password && passwordagain) 
         {
             const users = (await store.get('users')) || [];
-            const exists = users.some((u: any) => u.username === username && u.email === email);
-
-            if (exists) 
-            {
-                alert("That email or username is already registered.");
-                location.reload();
-                return;
-            }
+            const exists = users.some((u: any) => u.username === username || u.email === email);
 
             if (password !== passwordagain)
             {
@@ -33,16 +26,26 @@ function SingUp() {
                 location.reload();
                 return;
             }
+            
+            if (exists) 
+            {
+                alert("That email or username is already registered.");
+                location.reload();
+                return;
+            }
+            else
+            {
+                console.log('Not exist')
+                users.push({username, email, password});
+                await store.set('users', users);
 
-            users.push({username, email, password});
-            await store.set('users', users);
-
-            alert("Registration successful!");
+                sendEmail("Dear, " + username, "We hope you will enjoy our services. Here is your registration confirmation.", email, email);
+            }
             setUsername("");
             setEmail("");
             setPassword("");
             setPasswordAgain("");
-            location.reload();
+            
         }
         else 
         {

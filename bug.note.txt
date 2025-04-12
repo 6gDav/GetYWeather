@@ -13,3 +13,5 @@ GeoLocateMap very clumsy but working really well.
 There are some cases when the user hit page reload the Searchbar throw an error to not an existing city sometimes occur sometimes not.
 
 (change test)
+
+Calendar selected condition somwhow not working properly.

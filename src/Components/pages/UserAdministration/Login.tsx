@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MouseEvent } from 'react';
 import { IonContent } from '@ionic/react';
-
+import sendEmail from '../../EmailSend';
 import store from '../../storage';
 
 import '../style/LoginStyle.css'
@@ -23,6 +23,7 @@ function Login() {
         alert("Hello youar logind")
 
         //!TODO: email notification
+        sendEmail("Login registered", "If you haven't logged in, please contact us.", email, email);
       }
       else {
         alert("Wrong email address or passworld.")

@@ -1,10 +1,21 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, useState } from 'react';
+import sendEmail from '../EmailSend';
+
 import './Style/FooterSection.css'
 
 function FooterSection() {
+    const [emailAddres, setemailAddress] = useState<string>();
+
     const SenButtomMangger = (event: MouseEvent) => {
-        alert("Enter an Email adress.");
         event.preventDefault();
+        
+        if (emailAddres) {
+            sendEmail("Thanks for the subscribe", "Thanks for the subscription it is very kind of you if you want to cancel the subscription jusr make contact with us.", emailAddres, emailAddres)
+        }
+        else
+        {
+            alert("Enter an email address.");
+        }
     };
 
     return (
@@ -52,9 +63,7 @@ function FooterSection() {
                                 </div>
                                 <ul>
                                     <li><a href="/home">Home</a></li>
-                                    <li><a href="#">Portfolio</a></li>
                                     <li><a href="/contact">Contact</a></li>
-                                    <li><a href="#">About us</a></li>
                                     <li><a href="/features">Features</a></li>
                                     <li><a href="/pricing">Pricing</a></li>
                                 </ul>
@@ -70,7 +79,7 @@ function FooterSection() {
                                 </div>
                                 <div className="subscribe-form">
                                     <form action="#">
-                                        <input type="text" placeholder="Email Address" />
+                                        <input type="text" placeholder="Email Address" onChange={(e) => setemailAddress(e.target.value)}/>
                                         <button><i className="fab fa-telegram-plane" onClick={SenButtomMangger}>Send</i></button>
                                     </form>
                                 </div>
