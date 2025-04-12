@@ -14,16 +14,48 @@ function Calendar() {
 
     const setAlert = (event: React.FormEvent) => {
         event.preventDefault();
-        const email = emailAddresRef.current?.value.trim() ?? "" ;
+
         const currentdate = new Date();
 
-        if (email || email === "" || selected != undefined || (selected != undefined && (selected as Date).getDay() >= currentdate.getDay()) || (selected != undefined && (selected as Date).getMonth() >= currentdate.getMonth()) ||(selected != undefined && (selected as Date).getFullYear() >= currentdate.getFullYear())) {
+        const email = emailAddresRef.current?.value.trim() ?? "";
+        const selectedIsValidDate = selected instanceof Date && !isNaN(selected.getTime());
+
+        const year = currentdate.getFullYear();
+        const month = currentdate.getMonth() + 1;
+        const day = currentdate.getDate(); 
+
+        const stringConvertedSelected = selected?.toLocaleString() || '';
+        const splitedstringConvertedSelected = stringConvertedSelected.split(',');
+        console.log(splitedstringConvertedSelected[0]);
+
+        const selectedNumbers = splitedstringConvertedSelected[0].split('/');
+
+        const splitedMount = +selectedNumbers[0];
+        const splitedDay = +selectedNumbers[1];
+        const splitedYear = +selectedNumbers[2];
+
+        console.log(splitedMount + " splitedmounth");
+        console.log(splitedDay + " splitedday");
+        console.log(splitedYear + " splitedYear");
+
+        console.log(year + " current year");
+        console.log(month + " current month");
+        console.log(day + " current day");
+
+
+        console.log(splitedDay >= day, `${splitedDay} ${day}`);
+        console.log(splitedMount >= month, `${splitedMount} ${month}`);
+        console.log(splitedYear >= year, `${splitedYear} ${year}`);
+
+        const fullDateChack = splitedDay >= day && splitedMount >= month && splitedYear >= year;
+        console.log(fullDateChack);
+
+        if ((email !== "" && fullDateChack)) {
             alert("Ok");
             console.log(emailAddresRef.current?.value);
-            sendEmail("Notification setted to " + selected + " date", "We will notify you about the weather. " + descriptionRef , email, email);
-        }
-        else {
-            alert("Please enter an email anddress or a valid date.");
+            sendEmail("Notification set for " + selected, "We will notify you about the weather. " + descriptionRef.current?.value, email, email);
+        } else {
+            alert("Please enter a valid email address or a valid date.");
         }
     }
 
