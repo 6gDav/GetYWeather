@@ -34,8 +34,6 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 import { useEffect, useState } from 'react';
 
-
-
 //Naviagtion bars
 import AppBar from './Components/AppBar_and_UserInputsInBar/NewAppBar';
 import AppBarMobil from './Components/AppBar_and_UserInputsInBar/AppBarMobil';
@@ -72,6 +70,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  //The basic navigation of the progra
   return (
     <IonApp>
       <IonReactRouter>
@@ -86,7 +85,8 @@ const App: React.FC = () => {
             <Route path="/login" component={Login} exact />
             <Route path="/singup" component={SingUp} exact />
             <Route path="/forgotpassword" component={ForgotPassword} exact />
-            <Route exact path="/" render={() => <Redirect to="/home" />} />
+            <Route exact path="/" render={() => <Redirect to="/home" />} /> 
+            {/* set the Home page as the default */}
           </IonRouterOutlet>
         </IonContent>
       </IonReactRouter>
