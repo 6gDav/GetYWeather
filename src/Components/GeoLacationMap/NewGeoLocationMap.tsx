@@ -4,6 +4,7 @@ import L from 'leaflet';
 import axios from 'axios';
 
 import 'leaflet/dist/leaflet.css';
+import './style/GeoLocationStyle.css'
 
 
 function NewGeoLocationMap() {
@@ -72,7 +73,7 @@ function NewGeoLocationMap() {
   }, [coordinates, townName, mapInstance]);
 
   return (
-    <div id="map" style={{ height: "900px" }}></div>
+    <div id="map" className="mapStyle"></div>
   );
 }
 

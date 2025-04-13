@@ -5,7 +5,7 @@
 }
 
 .mapStyle {
-    width: 110%;
+    width: 100%;
     height: 860px;
 }
 
@@ -15,6 +15,6 @@
     }
 
     .mapStyle {
-        height: 730px;
+        width: 130%;
     }
 }
