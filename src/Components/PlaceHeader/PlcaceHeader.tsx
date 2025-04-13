@@ -3,24 +3,22 @@ import Infos from '../UserDate/UserDate';
 
 function PlcaceHeader() {
   //Varibles
-  const [fontSize, setFontSize] = useState<number>(100); //Font size
+  const [fontSize, setFontSize] = useState<number>(); //Font size
   const [townName, setTownName] = useState<string>(Infos.TownName); //The searched city
 
-  //Change chanckers
   useEffect(() => {
     const handleResize = () => {
-      //if the page width less then 600 
       if (window.innerWidth < 600) {
-        setFontSize(45); //set the font size
+        setFontSize(45);
       }
       else {
-        setFontSize(100); //if bigger
+        setFontSize(100);
       }
-    }
+    };
 
-    window.addEventListener("resize", handleResize); //watch the move of the page
-    return () => window.removeEventListener("resize", handleResize); // remove the listener
-  }, [window.innerWidth]);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //Set the town names
   useEffect(() => {
@@ -29,12 +27,13 @@ function PlcaceHeader() {
     };
 
     const interval = setInterval(updateTownName, 1000); //if the towh name change set it to the setted town nem
-
     return () => clearInterval(interval);
   }, [Infos.TownName]);
 
   return (
-    <div style={{ fontSize: fontSize }}>{townName || "Place not found"}</div>
+    <div>
+      <h1 style={{ fontSize: fontSize || 100 }}>{townName || "Place not found"}</h1>
+    </div>
   );
 }
 
