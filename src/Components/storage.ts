@@ -1,7 +1,11 @@
 import { Storage } from '@ionic/storage';
 
-//the database
+//teh database
 const store = new Storage();
-await store.create();
+async function initStorage() {
+    await store.create();
+}
+
+initStorage();
 
 export default store;
