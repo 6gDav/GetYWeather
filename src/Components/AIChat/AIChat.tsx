@@ -4,8 +4,7 @@ import './Styles/AIChatContainer.css'
 
 import AiChat from '../../../public/Images/AIChat.png';
 
-
-//!Ai chat is not functioning yet
+//!Ai chat is not functioning yet Coomin soon
 function AIChat() {
     const ManageAiButtom = (event: MouseEvent) => {
         event.preventDefault();
