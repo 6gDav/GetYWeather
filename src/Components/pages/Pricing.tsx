@@ -13,7 +13,9 @@ function Pricing() {
                 <div className="container py-3">
                     <main>
                         <div className="d-flex flex-column mb-3 text-center">
+                            {/* Free */}
                             <div className="col">
+
                                 <div className="card mb-4 rounded-3 shadow-sm">
                                     <div className="card-header py-3 text-bg-dark border-primary">
                                         <h4 className="my-0 fw-normal">Free</h4>
@@ -29,6 +31,7 @@ function Pricing() {
                                     </div>
                                 </div>
                             </div>
+                            {/* Free 2 */}
                             <div className="col">
                                 <div className="card mb-4 rounded-3 shadow-sm">
                                     <div className="card-header py-3 text-bg-warning border-primary">
@@ -45,6 +48,7 @@ function Pricing() {
                                     </div>
                                 </div>
                             </div>
+                            {/* Free 3 */}
                             <div className="col">
                                 <div className="card mb-4 rounded-3 shadow-sm border-primary">
                                     <div className="card-header py-3 text-bg-primary border-primary">

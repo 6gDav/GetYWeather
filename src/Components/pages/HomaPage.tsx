@@ -12,6 +12,7 @@ import GetIpTownName from '../GetIpTownName';
 import '../../global.css';
 
 function HomaPage() {
+  //Mixing the components 
   return (
     <IonContent class="body">
       <div className="main-div">

@@ -7,48 +7,48 @@ import '../style/SingUpStyle.css';
 import '../style/LoginStyle.css';
 
 function SingUp() {
-    const [username, setUsername] = useState<string>("");
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
-    const [passwordagain, setPasswordAgain] = useState<string>('');
+    const [username, setUsername] = useState<string>(""); //usrname
+    const [email, setEmail] = useState<string>(""); //user email
+    const [password, setPassword] = useState<string>(""); //the passwold
+    const [passwordagain, setPasswordAgain] = useState<string>(""); //passwold confirm
 
     const SenButtomMangger = async (event: MouseEvent) => {
         event.preventDefault();
 
-        if (username && email && password && passwordagain) 
-        {
+        if (username && email && password && passwordagain) {
             const users = (await store.get('users')) || [];
-            const exists = users.some((u: any) => u.username === username || u.email === email);
+            const exists = users.some((u: any) => u.username === username || u.email === email); //look for the username nad the email if isnt containd
 
-            if (password !== passwordagain)
-            {
+            //passwold chack
+            if (password !== passwordagain) {
                 alert("The passwolrds are not matching.");
                 location.reload();
                 return;
             }
-            
-            if (exists) 
-            {
+
+            //if the user already resistered
+            if (exists) {
                 alert("That email or username is already registered.");
                 location.reload();
                 return;
             }
-            else
-            {
+            //if not
+            else {
                 console.log('Not exist')
-                users.push({username, email, password});
+                users.push({ username, email, password });
                 await store.set('users', users);
 
-                sendEmail("Dear, " + username, "We hope you will enjoy our services. Here is your registration confirmation.", email, email);
+                sendEmail("Dear, " + username, "We hope you will enjoy our services. Here is your registration confirmation.", email, email);//send a notofication
             }
+
+            //reset
             setUsername("");
             setEmail("");
             setPassword("");
             setPasswordAgain("");
-            
+
         }
-        else 
-        {
+        else {
             alert("Please give a username, email address, passwolrd.");
         }
     };

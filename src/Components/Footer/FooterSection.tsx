@@ -22,6 +22,8 @@ function FooterSection() {
         <footer className="footer-section">
             <div className="container">
                 <div className="footer-cta pt-5 pb-5">
+
+                    {/* Accesability */}
                     <div className="row">
                         <div className="col-xl-4 col-md-4 mb-30">
                             <div className="single-cta">
@@ -61,6 +63,8 @@ function FooterSection() {
                                 <div className="footer-widget-heading">
                                     <h3>Useful Links</h3>
                                 </div>
+
+                                {/* Links */}
                                 <ul>
                                     <li><a href="/home">Home</a></li>
                                     <li><a href="/contact">Contact</a></li>
@@ -70,6 +74,8 @@ function FooterSection() {
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
+
+                            {/* Subscribe container */}
                             <div className="footer-widget">
                                 <div className="footer-widget-heading">
                                     <h3>Subscribe</h3>

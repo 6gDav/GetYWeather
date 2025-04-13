@@ -11,18 +11,19 @@ function WeatherCards() {
   const [data, setData] = useState<WeatherData[]>([]);
   const [infos, setinfos] = useState<any>();
 
+  //run if the searched city name change
   useEffect(() => {
     if (Infos.Data) {
       let parsedData: any = "";
       try {
-        parsedData = JSON.parse(Infos.Data);
+        parsedData = JSON.parse(Infos.Data); //parse the city to json
       }
       catch (error) {
         console.error("Error here " + error);
         return;
       }
 
-      const forecastData = parsedData.list.filter((item: WeatherData) => item.dt_txt.includes("12:00:00"));
+      const forecastData = parsedData.list.filter((item: WeatherData) => item.dt_txt.includes("12:00:00")); //search every item that contains the value
 
       setData(forecastData);
     }
@@ -33,7 +34,7 @@ function WeatherCards() {
       setinfos(Infos.Data);
     }
     catch (error) {
-      console.log("asdasd" + error);
+      console.log("An error occurd" + error);
     }
   }, [Infos.Data]);
 

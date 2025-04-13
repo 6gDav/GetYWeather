@@ -1,3 +1,4 @@
+//return the continent by the city name
 const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> => {
     //if (!city) return null; // Ha nincs város megadva, ne is próbálkozzon
 

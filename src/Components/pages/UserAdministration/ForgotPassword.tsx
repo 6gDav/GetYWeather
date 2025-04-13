@@ -5,16 +5,15 @@ import sendEmail from '../../EmailSend';
 import '../style/LoginStyle.css'
 
 function ForgotPassword() {
-    const [emailAddres, setemailAddress] = useState<string>();
+    const [emailAddres, setemailAddress] = useState<string>(); //the email addres of the user 
 
     const SenButtomMangger = (event: MouseEvent) => {
         event.preventDefault();
-        
+
         if (emailAddres) {
-            sendEmail("Forgot passworld", "If you forgot your passworld please make contact with us", emailAddres, emailAddres)
+            sendEmail("Forgot passworld", "If you forgot your passworld please make contact with us", emailAddres, emailAddres); //send and email
         }
-        else
-        {
+        else {
             alert("Enter an email address.");
         }
     };

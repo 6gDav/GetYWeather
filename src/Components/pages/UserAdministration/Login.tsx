@@ -7,23 +7,20 @@ import store from '../../storage';
 import '../style/LoginStyle.css'
 
 function Login() {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [email, setEmail] = useState<string>(""); //email andres of the user
+  const [password, setPassword] = useState<string>(""); //the passworld
 
   const SendButtomMangger = async (event: MouseEvent) => {
     event.preventDefault();
 
     if (email && password) {
-      console.log("email => " + email + " passworld => " + password);
-
       const users = (await store.get('users')) || [];
-      const userLoginStatus = users.find((u: any) => u.email === email && u.password === password);
+      const userLoginStatus = users.find((u: any) => u.email === email && u.password === password); //look for the user email and the passwold
 
       if (userLoginStatus) {
-        alert("Hello youar logind")
+        alert("Hello your logind")
 
-        //!TODO: email notification
-        sendEmail("Login registered", "If you haven't logged in, please contact us.", email, email);
+        sendEmail("Login registered", "If you haven't logged in, please contact us.", email, email); //send an meail bout the login
       }
       else {
         alert("Wrong email address or passworld.")
