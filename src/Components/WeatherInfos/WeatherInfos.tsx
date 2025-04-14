@@ -173,7 +173,7 @@ const WeatherInfos = () => {
           </div>
           <br />
           <div className="tileStyleContainer">
-            <h2>Humidity: <br /> <p style={{ fontSize: "50px" }}>{humidity}</p></h2>
+            <h2>Humidity: <br /> <p style={{ fontSize: "50px" }}>{humidity} %</p></h2>
           </div>
         </div>
 
