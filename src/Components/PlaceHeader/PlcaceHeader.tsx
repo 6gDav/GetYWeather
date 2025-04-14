@@ -1,24 +1,11 @@
 import { useState, useEffect } from 'react';
 import Infos from '../UserDate/UserDate';
 
+import './PlaceHeaderStyle.css'
+
 function PlcaceHeader() {
   //Varibles
-  const [fontSize, setFontSize] = useState<number>(); //Font size
   const [townName, setTownName] = useState<string>(Infos.TownName); //The searched city
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 600) {
-        setFontSize(45);
-      }
-      else {
-        setFontSize(100);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   //Set the town names
   useEffect(() => {
@@ -32,7 +19,7 @@ function PlcaceHeader() {
 
   return (
     <div>
-      <h1 style={{ fontSize: fontSize || 100 }}>{townName || "Place not found"}</h1>
+      <h1 className="headerFontSizeStyle">{townName || "Place not found"}</h1>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.headerFontSizeStyle {
+    font-size: 500%;
+}
+
+@media (max-width: 600px) 
+{
+    .headerFontSizeStyle {
+        font-size: 310%;
+    }
+}
