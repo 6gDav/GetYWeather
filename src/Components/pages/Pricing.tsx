@@ -24,7 +24,7 @@ function Pricing() {
                                         <h1 className="card-title pricing-card-title">Free<small className="text-body-secondary fw-light"></small></h1>
                                         <ul className="list-unstyled mt-3 mb-4">
                                             <li className='fs-5'>Forcast</li>
-                                            <li className='fs-5'>Email and SMS noticifation</li>
+                                            <li className='fs-5'>Email noticifation</li>
                                             <li className='fs-5'>World wide clokc</li>
                                             <li className='fs-5'>Map</li>
                                         </ul>
@@ -41,7 +41,7 @@ function Pricing() {
                                         <h1 className="card-title pricing-card-title">Free<small className="text-body-secondary fw-light"></small></h1>
                                         <ul className="list-unstyled mt-3 mb-4">
                                             <li className='fs-5'>Forcast</li>
-                                            <li className='fs-5'>Email and SMS noticifation</li>
+                                            <li className='fs-5'>Email noticifation</li>
                                             <li className='fs-5'>World wide clokc</li>
                                             <li className='fs-5'>Map</li>
                                         </ul>
@@ -58,7 +58,7 @@ function Pricing() {
                                         <h1 className="card-title pricing-card-title">Free<small className="text-body-secondary fw-light"></small></h1>
                                         <ul className="list-unstyled mt-3 mb-4">
                                             <li className='fs-5'>Forcast</li>
-                                            <li className='fs-5'>Email and SMS noticifation</li>
+                                            <li className='fs-5'>Email noticifation</li>
                                             <li className='fs-5'>World wide clokc</li>
                                             <li className='fs-5'>Map</li>
                                         </ul>
