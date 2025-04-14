@@ -26,7 +26,9 @@ function HomaPage() {
           <hr />
           <NewGeoLocationMap />
           <hr />
-          <Calendar />
+          <div className="calendarDiv">
+            <Calendar />
+          </div>
         </div>
         <FooterSection />
       </div>
