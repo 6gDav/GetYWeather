@@ -13,8 +13,8 @@ export default function App() {
   const [showAnimated2, setShowAnimated2] = useState(false);
 
   //Search input manager
-  const searchButtomRef = useRef<HTMLButtonElement>(null);    
-  const searchInputRef = useRef<HTMLInputElement>(null);  
+  const searchButtomRef = useRef<HTMLButtonElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const { handleClick } = useAppBar(searchButtomRef, searchInputRef);
 
@@ -28,20 +28,20 @@ export default function App() {
 
 
   return (
-    <>
-      <section className='mb-3'>
-        <MDBNavbar dark bgColor='dark'>
+    <div className="safe-area-top">
+      <section className="mb-3">
+        <MDBNavbar dark bgColor="dark">
           <MDBContainer fluid>
             <MDBNavbarToggler
-              type='button'
-              className='second-button'
-              data-target='#navbarToggleExternalContent'
-              aria-controls='navbarToggleExternalContent'
-              aria-expanded='false'
-              aria-label='Toggle navigation'
+              type="button"
+              className="second-button"
+              data-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
               onClick={() => setShowAnimated2(!showAnimated2)}
             >
-              <div className={`animated-icon2 ${showAnimated2 && 'open'}`}>
+              <div className={`animated-icon2 ${showAnimated2 && "open"}`}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -50,9 +50,8 @@ export default function App() {
             </MDBNavbarToggler>
           </MDBContainer>
         </MDBNavbar>
-
         <MDBCollapse open={showAnimated2}>
-          <div className='bg-dark shadow-3 p-4'>
+          <div className="bg-dark shadow-3 p-4">
 
             {/* Nav links */}
             <MDBBtn block className='border-bottom m-0' color='link'>
@@ -82,12 +81,12 @@ export default function App() {
             </IonRouterLink>
 
             {/* Theme Switcher */}
-            <label htmlFor="themeMode" className='textFontSizeOfHader' style={{ color: 'white' }}>
+            <label htmlFor="themeMode" className='textFontSizeOfHader' style={{ color: "white" }}>
               <input type="checkbox" id="themeMode" onChange={handleThemeChange} /> {themeText}
             </label>
           </div>
         </MDBCollapse>
       </section>
-    </>
+    </div>
   );
 }
