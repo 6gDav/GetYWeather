@@ -1,6 +1,11 @@
-declare global 
-{
+declare global {
     type NullAndString = string | null;
 }
 
-export {};
+declare module '*.png'
+{
+    const value: string;
+    export default value;
+}
+
+export { };
