@@ -7,6 +7,8 @@ import { SetClokcToNull } from '../Clock/Logic/The-Actudal-Clcok-Of-The-Town';
 
 import './Styles/AppBar.css';
 
+import GetYWeather_appIcon from  '../../../public/AppIcon/GetYWeather_appIcon.jpg'
+
 const AppBar: React.FC = () => {
     // Search input manager
     const searchButtonRef = useRef<HTMLButtonElement>(null);
@@ -30,6 +32,8 @@ const AppBar: React.FC = () => {
                     <Link to="/" className="navbar-brand text-white">
                         My App
                     </Link> */}
+
+                    <img src={GetYWeather_appIcon} alt="GetYWeather icon." style={{height: "65px", width: "65px", borderRadius: "50%"}} />
 
                     {/* Nav Links */}
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">

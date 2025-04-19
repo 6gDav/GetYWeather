@@ -8,12 +8,10 @@ function FooterSection() {
 
     const SenButtomMangger = (event: MouseEvent) => {
         event.preventDefault();
-        
         if (emailAddres) {
             sendEmail("Thanks for the subscribe", "Thanks for the subscription it is very kind of you if you want to cancel the subscription jusr make contact with us.", emailAddres, emailAddres)
         }
-        else
-        {
+        else {
             alert("Enter an email address.");
         }
     };
@@ -85,7 +83,7 @@ function FooterSection() {
                                 </div>
                                 <div className="subscribe-form">
                                     <form action="#">
-                                        <input type="text" placeholder="Email Address" onChange={(e) => setemailAddress(e.target.value)}/>
+                                        <input type="text" placeholder="Email Address" onChange={(e) => setemailAddress(e.target.value)} />
                                         <button><i className="fab fa-telegram-plane" onClick={SenButtomMangger}>Send</i></button>
                                     </form>
                                 </div>

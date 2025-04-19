@@ -13,7 +13,7 @@ describe('AIChat component', () => {
     });
 
     test('shows alert when button is clicked', () => {
-        window.alert = vi.fn(); // <-- Itt a csere
+        window.alert = vi.fn();
 
         render(<AIChat />);
         const buttonElement = screen.getByRole('button');

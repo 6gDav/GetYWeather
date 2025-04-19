@@ -14,7 +14,7 @@ function NewGeoLocationMap() {
 
   useEffect(() => {
     const town = Infos.TownName || "London"; //if the city is not valid set the city to London
-    setTownName(town); 
+    setTownName(town);
 
     const fetchCoordinates = async () => {
       try {
