@@ -1,6 +1,6 @@
 //Return the country by the city name
 export default async function GetCountryByCity(city: string): Promise<NullAndString> {
-    const API_KEY = "9dce43d6f9c9dd0aa623390f1f7343c8";
+    const API_KEY = import.meta.env.VITE_OPENWEATHER;
     const baseUrl = "https://api.openweathermap.org/geo/1.0/direct";
 
     try {

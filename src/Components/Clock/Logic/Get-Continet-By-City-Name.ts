@@ -2,7 +2,7 @@
 const GetContinentByCity = async (city: NullAndString): Promise<NullAndString> => {
     //if (!city) return null; // Ha nincs város megadva, ne is próbálkozzon
 
-    const apiKey = "b56615eb035c4135b259729965782e55";
+    const apiKey = import.meta.env.VITE_OPENCOTAGE;
     const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(city ?? '')}&key=${apiKey}`;
 
     try {
