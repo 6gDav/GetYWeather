@@ -3,8 +3,6 @@ import Calendar from './Calendar';
 import { vi } from 'vitest';
 import sendEmail from '../EmailSend';
 
-
-// Mock a sendEmail függvényt
 vi.mock('../EmailSend', () => ({
     default: vi.fn(),
 }));
@@ -50,5 +48,4 @@ describe('Calendar Component', () => {
 
         expect(sendEmail).not.toHaveBeenCalled();
     });
-
 });

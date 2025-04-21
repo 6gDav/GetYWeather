@@ -1,9 +1,9 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import FooterSection from './FooterSection';
-import { vi } from 'vitest'; 
+import { vi } from 'vitest';
 
 vi.mock('../EmailSend', () => ({
-  default: vi.fn(), 
+  default: vi.fn(),
 }));
 
 test('calls sendEmail with correct parameters when valid email is entered', async () => {
@@ -14,5 +14,4 @@ test('calls sendEmail with correct parameters when valid email is entered', asyn
 
   fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
   fireEvent.click(sendButton);
-
 });
