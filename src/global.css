@@ -40,5 +40,10 @@
 @media (max-width: 600px) {
     .main-div2 {
         width: 75%;
+        margin-left: 4%;
+    }
+
+    .calendarDiv {
+        width: 80%;
     }
 }
