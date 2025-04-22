@@ -7,7 +7,7 @@ export let cityName: string;
 function GetIpTownName() {
     //Set the clcok according to the user IP address
     useEffect(() => {
-        fetch("https://ipapi.co/json/")
+        fetch("http://ip-api.com/json")
             .then((res) => res.json())
             .then((data) => {
                 Infos.TownName = data.city;

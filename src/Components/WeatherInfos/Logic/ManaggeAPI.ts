@@ -3,6 +3,7 @@ import Infos from '../../UserDate/UserDate';
 //the searchable values
 type weatherTypes = 'townName' | 'main' | 'temperature' | 'humidity' | 'description' | 'clouds' | 'wind speed' | 'wind deg' | 'wind gust' | 'feels_like' | 'temp_min' | 'temp_max' | 'pressure';
 
+
 const apiKey = import.meta.env.VITE_OPENWEATHER;
 
 export default async function ManageAPI(city: string, weatherType: weatherTypes): Promise<NullAndString> {
