@@ -1,10 +1,10 @@
-import GetContinentByCity from './path-to-your-function'; // Az importálás helyes útvonalát add meg
+import GetContinentByCity from './path-to-your-function'; 
 import fetchMock from 'jest-fetch-mock';
 
-// A tesztelőfüggvények
+
 describe('GetContinentByCity', () => {
     beforeEach(() => {
-        fetchMock.resetMocks(); // Minden teszt előtt tisztítsuk meg a mock-ot
+        fetchMock.resetMocks(); 
     });
 
     it('should return continent for a valid city', async () => {
@@ -19,13 +19,10 @@ describe('GetContinentByCity', () => {
             ],
         };
 
-        // Mock válasz beállítása
         fetchMock.mockResponseOnce(JSON.stringify(mockData));
 
-        // Tesztelés: Guppit keresünk
-        const continent = await GetContinentByCity('Budapest');
+        const continent = await GetContinentByCity('London');
 
-        // Ellenőrzés
         expect(continent).toBe('Europe');
     });
 
