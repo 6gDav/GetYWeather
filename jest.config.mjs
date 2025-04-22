@@ -1,6 +1,4 @@
-
 export default {
-    preset: 'ts-jest/presets/js-with-babel',
     testEnvironment: 'jsdom',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     transform: {

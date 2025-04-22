@@ -72,6 +72,7 @@
     "jest-fetch-mock": "^3.0.3",
     "jsdom": "^22.1.0",
     "terser": "^5.4.0",
+    "ts-jest": "^29.3.2",
     "typescript": "^5.1.6",
     "vite": "~5.2.0",
     "vitest": "^0.34.6"
