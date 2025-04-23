@@ -1,6 +1,6 @@
 //#region Imports
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact, IonContent, isPlatform } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact, IonContent, isPlatform, IonRoute } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -85,7 +85,7 @@ const App: React.FC = () => {
             <Route path="/login" component={Login} exact />
             <Route path="/singup" component={SingUp} exact />
             <Route path="/forgotpassword" component={ForgotPassword} exact />
-            <Route exact path="/" render={() => <Redirect to="/home" />} /> 
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
             {/* set the Home page as the default */}
           </IonRouterOutlet>
         </IonContent>

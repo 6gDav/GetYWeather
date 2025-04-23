@@ -131,3 +131,33 @@
     padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom); */
 }
+
+/* Costume */
+.nav-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 300px) {
+    .nav-link-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .nav-link-item {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #343a40;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-link-item:hover {
+    background-color: #495057;
+  }
+  

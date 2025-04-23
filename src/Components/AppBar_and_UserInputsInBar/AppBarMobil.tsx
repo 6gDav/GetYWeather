@@ -54,18 +54,12 @@ export default function App() {
           <div className="bg-dark shadow-3 p-4">
 
             {/* Nav links */}
-            <MDBBtn block className='border-bottom m-0' color='link'>
-              <Link to="/home" className="nav-link px-3 text-white">Home</Link>
-            </MDBBtn>
-            <MDBBtn block className='border-bottom m-0' color='link'>
-              <Link to="/feature" className="nav-link px-3 text-white">Feature</Link>
-            </MDBBtn>
-            <MDBBtn block className='border-bottom m-0' color='link'>
-              <Link to="/pricing" className="nav-link px-3 text-white">Pricing</Link>
-            </MDBBtn>
-            <MDBBtn block className='border-bottom m-0' color='link'>
-              <Link to="/contact" className="nav-link px-3 text-white">Contact</Link>
-            </MDBBtn>
+            <div className="nav-link-grid">
+              <a href="/home" className="nav-link-item">Home</a>
+              <a href="/feature" className="nav-link-item">Feature</a>
+              <a href="/pricing" className="nav-link-item">Pricing</a>
+              <a href="/contact" className="nav-link-item">Contact</a>
+            </div>
 
             {/* Search Bar */}
             <input ref={searchInputRef} type="search" className="form-control form-control-dark text-bg-white" placeholder="Search" aria-label="Search" />
