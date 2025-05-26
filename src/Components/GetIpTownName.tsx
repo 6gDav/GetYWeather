@@ -5,7 +5,7 @@ import { makeToWorkTheClok } from './Clock/MakeWorkTheClock';
 export let cityName: string;
 
 function GetIpTownName() {
-    //Set the clcok according to the user IP address
+    //Set the clcok according to the user IP addres
     useEffect(() => {
         //fetch("http://ip-api.com/json")
         fetch("https://ipapi.co/json/")
