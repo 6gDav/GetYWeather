@@ -9,7 +9,7 @@ const sendEmail = (from_name: string, message: string, reply_to: string, email: 
         email: email
     };
 
-    emailjs.send("service_8o7qdjo", "template_wsq91jh", templateParams, "I5-in5jpHK-08Tn1L") //send the email to the given address
+    emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, templateParams, import.meta.env.VITE_EMAILJS_PUBLIC_KEY) //send the email to the given address
         .then((res) => {
             //log the resoult of the process
             console.log("Email send. " + res);
