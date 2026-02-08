@@ -1,4 +1,4 @@
-import Infos from '../UserDate/UserDate';
+import Infos from '../UserData/UserData';
 import stateAndCapital from './GeoLocateComponentsForClock/State-And-Capital';
 import countryCodeAndRealName from './GeoLocateComponentsForClock/CountryCode-And-RealName';
 import GetTheValueViaKey from './Logic/Record-Iterator';

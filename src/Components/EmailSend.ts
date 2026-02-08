@@ -9,7 +9,7 @@ const sendEmail = (from_name: string, message: string, reply_to: string, email: 
         email: email
     };
 
-    emailjs.send("service_zskt8rb", "template_wsq91jh", templateParams, "I5-in5jpHK-08Tn1L") //send the email to the given address
+    emailjs.send("service_8o7qdjo", "template_wsq91jh", templateParams, "I5-in5jpHK-08Tn1L") //send the email to the given address
         .then((res) => {
             //log the resoult of the process
             console.log("Email send. " + res);

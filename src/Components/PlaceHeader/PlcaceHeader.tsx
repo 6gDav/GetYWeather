@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Infos from '../UserDate/UserDate';
+import Infos from '../UserData/UserData';
 
 import './PlaceHeaderStyle.css'
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Infos from '../UserDate/UserDate';
+import Infos from '../UserData/UserData';
 import L from 'leaflet';
 import axios from 'axios';
 

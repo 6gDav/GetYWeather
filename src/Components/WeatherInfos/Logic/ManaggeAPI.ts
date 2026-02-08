@@ -1,4 +1,4 @@
-import Infos from '../../UserDate/UserDate';
+import Infos from '../../UserData/UserData';
 
 //the searchable values
 type weatherTypes = 'townName' | 'main' | 'temperature' | 'humidity' | 'description' | 'clouds' | 'wind speed' | 'wind deg' | 'wind gust' | 'feels_like' | 'temp_min' | 'temp_max' | 'pressure';

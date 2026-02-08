@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Infos from './UserDate/UserDate';
+import Infos from './UserData/UserData';
 import { makeToWorkTheClok } from './Clock/MakeWorkTheClock';
 
 export let cityName: string;

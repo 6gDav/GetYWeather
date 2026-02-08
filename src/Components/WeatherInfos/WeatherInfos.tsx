@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import WeatherCards from './WeatherCards';
-import Infos from '../UserDate/UserDate';
+import Infos from '../UserData/UserData';
 import ManageAPI from './Logic/ManaggeAPI';
 
 import './Styles/WeatherInfosStyling.css';

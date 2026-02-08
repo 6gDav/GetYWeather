@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Infos from '../../UserDate/UserDate';
+import Infos from '../../UserData/UserData';
 import { makeToWorkTheClok } from '../../Clock/MakeWorkTheClock';
 
 //the function require the search buttom instance and the entered town name too
