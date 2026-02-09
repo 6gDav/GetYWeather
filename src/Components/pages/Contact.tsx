@@ -25,9 +25,8 @@ function Contact() {
                 </div>
                 <hr />
 
-                {/* Bathó István Bence */}
                 <div className="peronalInfo">
-                    <h2 style={{color: "#151414"}}>Bathó István Bence</h2>
+                    <h2 style={{color: "#151414"}}>John Doe</h2>
                     <h3>Discription</h3>
                     <p className="discription">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                     <ul>
@@ -39,7 +38,7 @@ function Contact() {
 
                 {/* Pócs Zsombor */}
                 <div className="peronalInfo">
-                    <h2 style={{color: "#151414"}}>Pócs Zsombor</h2>
+                    <h2 style={{color: "#151414"}}>Doe John</h2>
                     <h3>Discription</h3>
                     <p className="discription">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                     <ul>
